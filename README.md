@@ -14,3 +14,21 @@ William Tang
 
 ### Slack Channel
 Team 4 - https://agilesoftwarecourse.slack.com/archives/C01E62UHTSL
+
+### Product Name
+
+### Far Vision
+
+### Near Vision
+
+### Stakeholders
+
+### User Persona
+
+### Product Backlog
+
+### Order of Product Backlog rationale
+
+### Definition of Ready
+
+### Relative-size Estimating
