@@ -11,3 +11,6 @@ Remi Oldham
 Shariq (Rick) Jamil
 
 William Tang
+
+### Slack Channel
+Team 4 - https://agilesoftwarecourse.slack.com/archives/C01E62UHTSL
