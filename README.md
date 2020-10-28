@@ -1,12 +1,13 @@
-## team-4
-CSCI E-71 Agile Software Development Project
+### CSCI E-71 Agile Software Development Project
 
-## Team Name
+### Team Name
 Team 4
 
-## Team Members
+### Team Members
 Diah Nasution
 
 Remi Oldham
 
 Shariq (Rick) Jamil
+
+William Tang
