@@ -1,21 +1,22 @@
 ### CSCI E-71 Agile Software Development Project
 
 ### Team Name
-Team 4
-
-### Team Members
-Diah Nasution
-
-Remi Oldham
-
-Shariq (Rick) Jamil
-
-William Tang
+Strawberry
 
 ### Slack Channel
-Team 4 - https://agilesoftwarecourse.slack.com/archives/C01E62UHTSL
+team-strawberry - https://agilesoftwarecourse.slack.com/archives/C01E62UHTSL
+
+### Team Members
+Diah Nasution - Scrum Master, Dev Team Member
+
+Remi Oldham - Dev Team Member
+
+Shariq (Rick) Jamil - Product Owner, Dev Team Member
+
+William Tang - Dev Team Member
 
 ### Product Name
+Receipt Catcher
 
 ### Far Vision
 
