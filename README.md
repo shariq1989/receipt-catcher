@@ -1,7 +1,7 @@
 ### CSCI E-71 Agile Software Development Project
 
 ### Team Name
-Strawberry
+Strawberry :strawberry:
 
 ### Slack Channel
 team-strawberry - https://agilesoftwarecourse.slack.com/archives/C01E62UHTSL
