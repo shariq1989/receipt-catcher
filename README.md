@@ -79,5 +79,5 @@ For each PBI it must have:
 - A title
 
 ### Relative-size Estimating
-We used Affinity Group Sizing to estimate the size of the stories and pointed them using the number sequence provided in the Miro Planning Poker tool
+We used Affinity Group Sizing to estimate the size of the stories and pointed them using the number sequence provided in the Miro Planning Poker tool.
 Everyone in the Strawberry team is a development team member so we were all involved in estimating. 
