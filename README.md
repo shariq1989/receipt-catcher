@@ -40,30 +40,30 @@ Tressa Jamil, Shopper
 
 ### User Persona
 
-| Name          | Tressa Jamil  |
-| ------------- | ------------- |
-| Role          | Shopper       |
-| Age           | 32            |
-| Gender        | Female        |
-| Education     | BSc Elementary Education in Special Education            |
-| Work          | Pastor       |
-| Location      | Colorado Springs, CO            |
-| Goals         | Store receipts digitally        |
-|               | Quickly find a receipt in order to make a product return            |
-|               | Shop smarter            |
-| Frustrations  | Storing paper receipts        |
-|               | Finding the receipt for a particular purchase |
-|               | Impulsive purchases                           |
-|               | Going to the store without a plan             |
-| Motivations   | Making healthier choices for herself and her family        |
-|               | Being frugal |
-|               | Going to the grocery store with a well-curated shopping list             |
+| Name          | Tressa Jamil                                                |
+| ------------- | ------------------------------------------------------------|
+| Role          | Shopper                                                     |
+| Age           | 32                                                          |
+| Gender        | Female                                                      |
+| Education     | BSc Elementary Education in Special Education               |
+| Work          | Pastor                                                      |
+| Location      | Colorado Springs, CO                                        |
+| Goals         | Store receipts digitally                                    |
+|               | Quickly find a receipt in order to make a product return    |
+|               | Shop smarter                                                |
+| Frustrations  | Storing paper receipts                                      |
+|               | Finding the receipt for a particular purchase               |
+|               | Impulsive purchases                                         |
+|               | Going to the store without a plan                           |
+| Motivations   | Making healthier choices for herself and her family         |
+|               | Being frugal                                                |
+|               | Going to the grocery store with a well-curated shopping list|
 
 ### Product Backlog
 https://miro.com/app/board/o9J_kg1b1Ck=/
 
 ### Order of Product Backlog rationale
-We identified the smallest and largest product backlog items in terms of work effort. We then compared the level of effort required for the other items to these two items and ranked them. We then went over the list and reranked if there were any dependencies that would require an item to be completed prior to another. 
+We pretended as if we could only complete one story from the backlog and decided which story that would be. We continued this process with the rest of the stories in the backlog until the backlog was fully sorted and ordered. During this process we considered the value each story would bring to the stakeholders as well as dependencies between stories.
 
 ### Definition of Ready
 For each PBI it must have:
@@ -80,4 +80,4 @@ For each PBI it must have:
 
 ### Relative-size Estimating
 We used Affinity Group Sizing to estimate the size of the stories and pointed them using the number sequence provided in the Miro Planning Poker tool
-All team members are development team members so the entire team was involved in estimating. 
+Everyone in the Strawberry team is a development team member so we were all involved in estimating. 
