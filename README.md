@@ -1,4 +1,4 @@
-### CSCI E-71 Agile Software Development Project
+## CSCI E-71 Agile Software Development Project
 
 ### Team Name
 Strawberry :strawberry:
@@ -81,3 +81,33 @@ For each PBI it must have:
 ### Relative-size Estimating
 We used Affinity Group Sizing to estimate the size of the stories and pointed them using the number sequence provided in the Miro Planning Poker tool.
 Everyone in the Strawberry team is a development team member so we were all involved in estimating. 
+
+## First Sprint
+
+### Story Point Forecast
+14 points
+
+### Forecast Rationale
+Since this is our very first sprint, we don’t have any historical reference to go by.  The team decided that the first 
+four stories, totaling 14 story points is a good start.
+
+### Sprint Planning Participation
+On Wednesday, Nov 4, at 9PM Eastern Standard Time, all team members of Team Strawberry participated in Sprint Planning 
+as shown in the Zoom participant list below.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/sprint_planning.png" width="250"
+ alt="sprint_planning">
+
+### Kanban Board
+https://miro.com/app/board/o9J_kg1b1Ck=/
+
+### Sprint Burndown Chart
+https://miro.com/app/board/o9J_kg1b1Ck=/
+
+### Daily Scrum
+On Friday, Nov 6, at 9PM Eastern Standard Time, all team members of Team Strawberry participated in the first daily
+scrum as shown in the Zoom participant list below.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/daily_scrum1.png" width="250"
+ alt="daily_scrum1.png">
+
