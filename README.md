@@ -91,5 +91,6 @@ Everyone in the Strawberry team is a development team member so we were all invo
 Since this is our very first sprint, we don’t have any historical reference to go by.  The team decided that the first 4 stories, totaling 14 story points is a good start.
 
 ### Participation
-On Wednesday, Nov 4, at 9PM Eastern Standard Time, all team members of Team Strawberry participated in this activity as shown on the attached picture.
+On Wednesday, Nov 4, at 9PM Eastern Standard Time, all team members of Team Strawberry participated in this activity as shown on the image below.
+![Sprint Planning](https://github.com/shariq1989/receipt-catcher/blob/main/readme/sprint_planning.png)
 
