@@ -88,10 +88,26 @@ Everyone in the Strawberry team is a development team member so we were all invo
 14 points
 
 ### Forecast Rationale
-Since this is our very first sprint, we don’t have any historical reference to go by.  The team decided that the first 4 stories, totaling 14 story points is a good start.
+Since this is our very first sprint, we don’t have any historical reference to go by.  The team decided that the first 
+four stories, totaling 14 story points is a good start.
 
-### Participation
-On Wednesday, Nov 4, at 9PM Eastern Standard Time, all team members of Team Strawberry participated in this activity as shown on the image below.
+### Sprint Planning Participation
+On Wednesday, Nov 4, at 9PM Eastern Standard Time, all team members of Team Strawberry participated in Sprint Planning 
+as shown in the Zoom participant list below.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/sprint_planning.png" width="250">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/sprint_planning.png" width="250"
+ alt="sprint_planning">
+
+### Kanban Board
+https://miro.com/app/board/o9J_kg1b1Ck=/
+
+### Sprint Burndown Chart
+https://miro.com/app/board/o9J_kg1b1Ck=/
+
+### Daily Scrum
+On Friday, Nov 6, at 9PM Eastern Standard Time, all team members of Team Strawberry participated in the first daily
+scrum as shown in the Zoom participant list below.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/daily_scrum1.png" width="250"
+ alt="daily_scrum1.png">
 
