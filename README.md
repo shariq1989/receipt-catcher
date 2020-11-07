@@ -1,4 +1,4 @@
-### CSCI E-71 Agile Software Development Project
+## CSCI E-71 Agile Software Development Project
 
 ### Team Name
 Strawberry :strawberry:
@@ -81,3 +81,15 @@ For each PBI it must have:
 ### Relative-size Estimating
 We used Affinity Group Sizing to estimate the size of the stories and pointed them using the number sequence provided in the Miro Planning Poker tool.
 Everyone in the Strawberry team is a development team member so we were all involved in estimating. 
+
+## First Sprint
+
+### Story Point Forecast
+14 points
+
+### Forecast Rationale
+Since this is our very first sprint, we don’t have any historical reference to go by.  The team decided that the first 4 stories, totaling 14 story points is a good start.
+
+### Participation
+On Wednesday, Nov 4, at 9PM Eastern Standard Time, all team members of Team Strawberry participated in this activity as shown on the attached picture.
+
