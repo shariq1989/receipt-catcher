@@ -92,5 +92,6 @@ Since this is our very first sprint, we don’t have any historical reference to
 
 ### Participation
 On Wednesday, Nov 4, at 9PM Eastern Standard Time, all team members of Team Strawberry participated in this activity as shown on the image below.
-![Sprint Planning](https://github.com/shariq1989/receipt-catcher/blob/main/readme/sprint_planning.png)
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/sprint_planning.png" width="250">
 
