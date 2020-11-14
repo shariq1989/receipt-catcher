@@ -173,6 +173,8 @@ Evidence of us updating our task board
   alt="activity2.png">
   
 #### Sprint Review
+Retrospective https://miro.com/app/board/o9J_kg1b1Ck=/?moveToWidget=3074457351603556576&cot=14
+
 Our stakeholder Tressa Jamil attended as evidenced by the Zoom participant list
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.PNG" width="500"
