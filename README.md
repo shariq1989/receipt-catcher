@@ -166,6 +166,7 @@ We did not see any impediments that would keep us from meeting the Sprint Goal. 
 
 #### Activity
 Evidence of us updating our task board
+
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/activity.png" width="250"
  alt="activity.png">
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/activity2.png" width="250"
@@ -173,5 +174,6 @@ Evidence of us updating our task board
   
 #### Sprint Review
 Our stakeholder Tressa Jamil attended as evidenced by the Zoom participant list
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.PNG" width="250"
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.PNG" width="500"
   alt="review.png">
