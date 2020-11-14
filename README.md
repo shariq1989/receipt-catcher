@@ -173,5 +173,5 @@ Evidence of us updating our task board
   
 #### Sprint Review
 Our stakeholder Tressa Jamil attended as evidenced by the Zoom participant list
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.png" width="250"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.PNG" width="250"
   alt="review.png">
