@@ -204,3 +204,19 @@ The current product backlog already covers the first request, and we added the s
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.PNG" width="500"
   alt="review.png">
+
+#### Product Increment
+A screenshot of the upload and user authentication functionalities of the app working.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/increment.png" width="300"
+  alt="increment.png">
+  
+#### Tests
+We ran server side and client side tests using meteor. Server tests are run through command line and client tests are
+run when the app is loaded in a browser. 
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/client_tests.png" width="300"
+  alt="client_tests.png">
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/server_tests.png" width="300"
+  alt="server_tests.png">
