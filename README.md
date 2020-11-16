@@ -188,7 +188,7 @@ the code that was written as a result.
 The entire team mobbed to troubleshoot getting the application running locally on William's computer. William was the 
 driver while the rest of us acted as navigators.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/mob.png" width="800"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/mob.png" width="1000"
   alt="mob.png">
   
 #### Sprint Review
