@@ -168,12 +168,32 @@ We did not see any impediments that would keep us from meeting the Sprint Goal. 
 
 #### Activity
 Evidence of us updating our task board
+
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/activity.png" width="250"
  alt="activity.png">
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/activity2.png" width="250"
   alt="activity2.png">
+    
+#### Mob or Paired Programming
+Diah and I paired to finish up the UI portion of a story that I wrote the backend for. I navigated her around my code
+she filled in the gaps to complete the story. Below is the conversation related to the scheduling of this meeting and 
+the code that was written as a result.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/paired_programming.png" width="400"
+  alt="paired_programming.png">
+  
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/pair2.png" width="250"
+  alt="pair2.png">
+  
+The entire team mobbed to troubleshoot getting the application running locally on William's computer. William was the 
+driver while the rest of us acted as navigators.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/mob.png" width="250"
+  alt="mob.png">
   
 #### Sprint Review
+https://miro.com/app/board/o9J_kg1b1Ck=/?moveToWidget=3074457351603556576&cot=14
+
 Our stakeholder Tressa Jamil attended as evidenced by the Zoom participant list. She wanted a few features for the next sprint:
 
 1. Centralized place to view all receipts
@@ -181,32 +201,6 @@ Our stakeholder Tressa Jamil attended as evidenced by the Zoom participant list.
 2. Ability to categorize receipts upon uploads.
 
 The current product backlog already covers the first request, and we added the second request as a new product backlog item.
-
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.png" width="250"
-  alt="review.png">
-  
-### Mob or Paired Programming
-Diah and I paired to finish up the UI portion of a story that I wrote the backend for. I navigated her around my code
-she filled in the gaps to complete the story. Below is the conversation related to the scheduling of this meeting and 
-the code that was written as a result.
-
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/paired_programming.png" width="250"
-  alt="paired_programming.png">
-  
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/paired_programming.png" width="250"
-  alt="paired_programming.png">
-  
-The entire team mobbed to troubleshoot getting the application running locally on William's computer. William was the 
-driver while the rest of us acted as navigators.
-
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/pair2.png" width="250"
-  alt="pair2.png">
-
-### Retrospective 
-
-https://miro.com/app/board/o9J_kg1b1Ck=/?moveToWidget=3074457351603556576&cot=14
-
-Our stakeholder Tressa Jamil attended as evidenced by the Zoom participant list
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.PNG" width="500"
   alt="review.png">
