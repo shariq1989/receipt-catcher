@@ -179,16 +179,16 @@ Diah and I paired to finish up the UI portion of a story that I wrote the backen
 she filled in the gaps to complete the story. Below is the conversation related to the scheduling of this meeting and 
 the code that was written as a result.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/paired_programming.png" width="400"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/paired_programming.png" width="800"
   alt="paired_programming.png">
   
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/pair2.png" width="250"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/pair2.png" width="800"
   alt="pair2.png">
   
 The entire team mobbed to troubleshoot getting the application running locally on William's computer. William was the 
 driver while the rest of us acted as navigators.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/mob.png" width="250"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/mob.png" width="800"
   alt="mob.png">
   
 #### Sprint Review
