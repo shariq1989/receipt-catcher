@@ -1,23 +1,13 @@
-machine:
-  node:
-    version: 6.5.0
-  java:
-    # This is needed by Chimp to run Selenium so we can start Chrome and Firefox
-    version: oraclejdk8
-  environment:
-    # Circle runs each command in a separate shell. This mechanism allows us to centralize variables in this file
-    DEPLOY_SITE: qualityfaster
-    BROWSER: chrome
-
 dependencies:
   cache_directories:
     - "node_modules"
     - "~/.npm"
     - "~/.meteor"
-
   override:
-    # Install & cache Meteor
-    - scripts/install-meteor.sh
+    - curl https://install.meteor.com | /bin/sh
+    - npm install -g chimp
+    - meteor npm install --save bcrypt
+    - npm install
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
