@@ -1,16 +1,29 @@
-dependencies:
-  cache_directories:
-    - "node_modules"
-    - "~/.npm"
-    - "~/.meteor"
-  override:
-    - curl https://install.meteor.com | /bin/sh
-    - npm install -g chimp
-    - meteor npm install --save bcrypt
-    - npm install
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
+jobs:
+  test:
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+      - run: npm install
+      - run:
+          name: Run tests
+          command: npm test
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
 workflows:
   node-tests:
     jobs:
