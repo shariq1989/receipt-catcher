@@ -12,4 +12,3 @@ workflows:
   node-tests:
     jobs:
       - server_tests
-      - client_tests
