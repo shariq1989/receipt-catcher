@@ -19,50 +19,6 @@ describe("receipt-catcher", function () {
         it("server is not client", function () {
             assert.strictEqual(Meteor.isClient, false);
         });
-        it("adding file to collection", function () {
-            import fs from 'fs';
-            import {FilesCollection} from 'meteor/ostrio:files';
-
-            fs.readFile('/var/mob.png', function (error, data) {
-                if (error) {
-                    throw error;
-                } else {
-                    Receipts.write(data, {
-                        fileName: 'mob.png',
-                        fielId: 'abc123myId', //optional
-                        type: 'image/png'
-                    }, function (writeError, fileRef) {
-                        if (writeError) {
-                            throw writeError;
-                        } else {
-                            assert(fileRef._id !== null);
-                        }
-                    });
-                }
-            });
-        });
-        it("adding non file to collection", function () {
-            import fs from 'fs';
-            import {FilesCollection} from 'meteor/ostrio:files';
-
-            fs.readFile('/var/mongodb-compass_1.23.0_amd64.deb', function (error, data) {
-                if (error) {
-                    throw error;
-                } else {
-                    Receipts.write(data, {
-                        fileName: 'mongodb-compass_1.23.0_amd64.deb',
-                        fielId: 'abc123myId', //optional
-                        type: 'deb'
-                    }, function (writeError, fileRef) {
-                        if (writeError) {
-                            throw writeError;
-                        } else {
-                            assert(fileRef._id !== null);
-                        }
-                    });
-                }
-            });
-        });
     }
     it("request collection exists", async function () {
         let collection = null;
