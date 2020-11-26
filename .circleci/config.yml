@@ -8,14 +8,6 @@ jobs:
     steps:
       - checkout
       - run: curl https://install.meteor.com/ | sh && cd server && npm install && npm test
-  client_tests:
-    docker:
-      - image: circleci/node:8-browsers
-    environment:
-      - CHROME_BIN: "/usr/bin/google-chrome"
-    steps:
-      - checkout
-      - run: curl https://install.meteor.com/ | sh && cd client && npm install && npm test
 workflows:
   node-tests:
     jobs:

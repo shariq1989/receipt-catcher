@@ -5,17 +5,15 @@
       <h2>Select an image</h2>
       <div id="ReceiptForm">
         <form @submit="formSubmit">
-          <input id="file" type="file" ></br>
-          <input type="text" id="Store" value="Store Name"></br>
-          Date of Purchase: <input type="date" id="Date"></br>
-          <input type="text" id="Total" value="Total Spent"></br>
-          <input type="text" id="Category" value="Category"></br>
+          <input id="file" type="file"><br>
+          <input type="text" id="Store" value="Store Name"><br>
+          Date of Purchase: <input type="date" id="Date"><br>
+          <input type="text" id="Total" value="Total Spent"><br>
+          <input type="text" id="Category" value="Category"><br>
           <input type="submit" value="Submit">
         </form>
       </div>
-      <!-- <input type="file" @change="onFileChange"> Saved for posterity-->
     </div>
-    <!-- Displayed after upload complete -->
     <div v-else>
       <img :src="image" alt="uploaded image"/>
       <button @click="uploadAnotherReceipt">Upload another</button>
@@ -34,7 +32,7 @@ export default {
     }
   },
   methods: {
-    formSubmit(e){
+    formSubmit(e) {
       e.preventDefault();
       //get values from form
       const Store = e.target.Store.value;
@@ -43,7 +41,7 @@ export default {
       const Category = e.target.Category.value;
       let file = e.target.file.files[0];
       //Create JSON object
-      data = {
+      let data = {
         "Store": Store,
         "Total": Total,
         "Date": Date,
@@ -54,38 +52,11 @@ export default {
       // Submit to database
       this.uploadReceipt(data);
     },
-
-    onFileChange(e) {
-      let files = e.target.files || e.dataTransfer.files;
-      if (!files.length)
-        return;
-      if (e.currentTarget.files && e.currentTarget.files[0]) {
-        let file = e.currentTarget.files[0];
-        console.log(file);
-        this.uploadReceipt(file)
-      }
-      this.displayImage(files[0]);
-    },
-
-    displayImage(e) {
-      console.log(e);
-      let fileObjToSubmit = e.currentTarget.files[0];
-      console.log(e.currentTarget.files[0]);
-      return fileObjToSubmit;
-      const reader = new FileReader();
-      const vm = this;
-
-      reader.onload = (e) => {
-        vm.image = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    },
-
-    uploadAnotherReceipt: function () {
+    uploadAnotherReceipt() {
       this.image = null;
     },
     uploadReceipt(obj) {
-      image = obj.file;
+      let image = obj.file;
       console.log(image);
       let upload = Receipts.insert({
         file: image,
