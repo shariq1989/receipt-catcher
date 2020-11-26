@@ -6,10 +6,10 @@
       <div id="ReceiptForm">
         <form @submit="formSubmit">
           <input id="file" type="file" ></br>
-          <input type="text" id="Store" value="Store Name"></br>
+          Store Name: <input type="text" id="Store"></br>
           Date of Purchase: <input type="date" id="Date"></br>
-          <input type="text" id="Total" value="Total Spent"></br>
-          <input type="text" id="Category" value="Category"></br>
+          Total Spent: <input type="text" id="Total"></br>
+          Category: <input type="text" id="Category"></br>
           <input type="submit" value="Submit">
         </form>
       </div>
@@ -34,6 +34,7 @@ export default {
     }
   },
   methods: {
+
     formSubmit(e){
       e.preventDefault();
       //get values from form
