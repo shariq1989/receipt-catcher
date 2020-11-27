@@ -7,7 +7,7 @@
         <form @submit="formSubmit">
           <input id="file" type="file" ></br>
           Store Name: <input type="text" id="Store"></br>
-          Date of Purchase: <input type="date" id="Date"></br>
+          Date of Purchase: <input type="date" id="Date" ref="Date"></br>
           Total Spent: <input type="text" id="Total"></br>
           Category: <input type="text" id="Category"></br>
           <input type="submit" value="Submit">
@@ -32,6 +32,21 @@ export default {
       counter: 0,
       image: null
     }
+  },
+  mounted() {
+    let today = new Date(),
+        dd = today.getDate(),
+        mm = today.getMonth()+1,
+        yyyy = today.getFullYear();
+
+    dd = dd < 10 ? dd='0'+dd : dd;
+
+    mm = mm < 10 ? mm='0'+mm : mm;
+
+    today = yyyy+'-'+mm+'-'+dd;
+
+    let date = this.$refs.Date;
+    date.setAttribute('max',today);
   },
   methods: {
 
