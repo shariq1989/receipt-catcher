@@ -5,11 +5,11 @@
       <h2>Select an image</h2>
       <div id="ReceiptForm">
         <form @submit="formSubmit">
-          <input id="file" type="file" ></br>
-          Store Name: <input type="text" id="Store"></br>
-          Date of Purchase: <input type="date" id="Date" ref="Date"></br>
-          Total Spent: <input type="text" id="Total"></br>
-          Category: <input type="text" id="Category"></br>
+          <input id="file" type="file" ><br>
+          <label for="Store">Store Name: </label><input type="text" id="Store"><br>
+          <label for="Date">Date of Purchase: </label><input type="date" id="Date" ref="Date"><br>
+          <label for="Total">Total Spent: </label><input type="text" id="Total"><br>
+          <label for="Category">Category: </label><input type="text" id="Category"><br>
           <input type="submit" value="Submit">
         </form>
       </div>
@@ -67,33 +67,6 @@ export default {
       // Submit to database
       this.uploadReceipt(data);
     },
-
-    onFileChange(e) {
-      let files = e.target.files || e.dataTransfer.files;
-      if (!files.length)
-        return;
-      if (e.currentTarget.files && e.currentTarget.files[0]) {
-        let file = e.currentTarget.files[0];
-        console.log(file);
-        this.uploadReceipt(file)
-      }
-      this.displayImage(files[0]);
-    },
-
-    displayImage(e) {
-      console.log(e);
-      let fileObjToSubmit = e.currentTarget.files[0];
-      console.log(e.currentTarget.files[0]);
-      return fileObjToSubmit;
-      const reader = new FileReader();
-      const vm = this;
-
-      reader.onload = (e) => {
-        vm.image = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    },
-
     uploadAnotherReceipt: function () {
       this.image = null;
     },
