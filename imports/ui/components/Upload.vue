@@ -5,11 +5,11 @@
       <h2>Select an image</h2>
       <div id="ReceiptForm">
         <form @submit="formSubmit">
-          <input id="file" type="file"><br>
-          <input type="text" id="Store" value="Store Name"><br>
-          Date of Purchase: <input type="date" id="Date"><br>
-          <input type="text" id="Total" value="Total Spent"><br>
-          <input type="text" id="Category" value="Category"><br>
+          <input id="file" type="file" ></br>
+          Store Name: <input type="text" id="Store"></br>
+          Date of Purchase: <input type="date" id="Date" ref="Date"></br>
+          Total Spent: <input type="text" id="Total"></br>
+          Category: <input type="text" id="Category"></br>
           <input type="submit" value="Submit">
         </form>
       </div>
@@ -30,6 +30,21 @@ export default {
       counter: 0,
       image: null
     }
+  },
+  mounted() {
+    let today = new Date(),
+        dd = today.getDate(),
+        mm = today.getMonth()+1,
+        yyyy = today.getFullYear();
+
+    dd = dd < 10 ? dd='0'+dd : dd;
+
+    mm = mm < 10 ? mm='0'+mm : mm;
+
+    today = yyyy+'-'+mm+'-'+dd;
+
+    let date = this.$refs.Date;
+    date.setAttribute('max',today);
   },
   methods: {
     formSubmit(e) {
@@ -52,7 +67,34 @@ export default {
       // Submit to database
       this.uploadReceipt(data);
     },
-    uploadAnotherReceipt() {
+
+    onFileChange(e) {
+      let files = e.target.files || e.dataTransfer.files;
+      if (!files.length)
+        return;
+      if (e.currentTarget.files && e.currentTarget.files[0]) {
+        let file = e.currentTarget.files[0];
+        console.log(file);
+        this.uploadReceipt(file)
+      }
+      this.displayImage(files[0]);
+    },
+
+    displayImage(e) {
+      console.log(e);
+      let fileObjToSubmit = e.currentTarget.files[0];
+      console.log(e.currentTarget.files[0]);
+      return fileObjToSubmit;
+      const reader = new FileReader();
+      const vm = this;
+
+      reader.onload = (e) => {
+        vm.image = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    },
+
+    uploadAnotherReceipt: function () {
       this.image = null;
     },
     uploadReceipt(obj) {
