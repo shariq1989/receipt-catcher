@@ -147,15 +147,20 @@ On Sunday, Nov 15, the Development Team met and participated in the Sprint Plann
  alt="daily_scrum_11_24.png">
  
 ### Daily Scrum - What did you do? (5 points)
-Rick: Deployed application to a Linode server. Sent messages to Richard regarding handling project requirements vs stakeholder requests, and resubmitting homework.
-Diah: Kept up with all thread on Slack, Re-did Sprint burndown chart, Calculated the Rubric for Project Part 2 and started gathering evidence to resubmit.
-Remi: Worked on meta-data upload. Files now are uploaded to the database with meta-data. (Handles the create function from CRUD)
-Will: Worked on meteor and Vue learning and playing around with the current code. 
+- Rick: Deployed application to a Linode server. Sent messages to Richard regarding handling project requirements vs stakeholder requests, and resubmitting homework.
+
+- Diah: Kept up with all thread on Slack, Re-did Sprint burndown chart, Calculated the Rubric for Project Part 2 and started gathering evidence to resubmit.
+
+- Remi: Worked on meta-data upload. Files now are uploaded to the database with meta-data. (Handles the create function from CRUD)
+
+- Will: Worked on meteor and Vue learning and playing around with the current code. 
 
 ### Daily Scrum - What will you do? (5 points)
-Rick: I will start working on integrating CI/CD for automated testing and builds
-Remi: I will help in writing and running unit tests for TDD.
-Diah: Create slides for Sprint Review.  Continue to gather evidence to resubmit.  Continue to fill in Project Part 3 rubric.
+- Rick: I will start working on integrating CI/CD for automated testing and builds
+
+- Remi: I will help in writing and running unit tests for TDD.
+
+- Diah: Create slides for Sprint Review.  Continue to gather evidence to resubmit.  Continue to fill in Project Part 3 rubric.
 
 ### Daily Scrum - Any impediments? (3 points)
 
