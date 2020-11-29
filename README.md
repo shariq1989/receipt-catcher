@@ -90,6 +90,14 @@ Details of First Sprint can be found in PREVIOUSREADME.md file
 ### Sprint Planning (1 point)
 The forecast for the second sprint is 20 story points.
 
+- Receipt metadata (3 points)
+
+- Sort by date/amount/store name (1 point)
+
+- Delete receipts (3 points)
+
+- UI prototype (13 points)
+
 ### Forecast Rationale (1 point)
 The forecast was an increase from the previous sprint because of a few reasons.  First, we were able to finish the initial setup of the project quicker than our expectation, which allowed us to start thinking about the code and how we are going to accomplish the user stories.  Second, team members were able to complete high story points in a short amount of time during the first sprint.  Thus, at the second Sprint Planning session, the team felt confident that they would be able to achieve higher story points in this second sprint.
 
@@ -111,7 +119,7 @@ On Sunday, Nov 15, the Development Team met and participated in the Sprint Plann
  https://miro.com/app/board/o9J_kg1b1Ck=/
  
  ### User Story Decomposition (2 points)
- We decided to use <span style="color:purple">*a purple card*</span> to represent a Story and <span style="color:blue">*a blue card*</span> to represent a Dev Task.  Additionally, Dev Task is prefixed with the word "Dev Task" in front of it.  Using this color rule, we can easily identify tasks from stories.  A Story may have more than 1 Dev Task.  Here are some example of a Story and some Dev Task underneath it.
+ We decided to use <span style="color:purple">*a purple card*</span> to represent a Story and <span style="color:blue">*a blue card*</span> to represent a Dev Task.  Additionally, Dev Task is prefixed with the word "Dev Task".  Using this color rule, we can easily identify tasks from stories.  A Story may have more than 1 Dev Task.  Here are some examples of a Story and some Dev Task underneath it.
  
  <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/story_devtasks1.png" width="250"
  alt="story_devtasks1.png">
@@ -126,7 +134,7 @@ On Sunday, Nov 15, the Development Team met and participated in the Sprint Plann
  
  ### Sprint Burndown Chart (6 points)
  1. We have a Sprint Burndown Chart located above the image of a Strawberry on our Miro board: https://miro.com/app/board/o9J_kg1b1Ck=/
- 2. The x-axis represents date of the sprint by day.
+ 2. The x-axis represents dates of the sprint by day.
  3. The y-axis represents story points remaining to be done.
  4. We tried our best to keep a linear curve descending from left to right, however, in the middle of the Sprint, we realized that we did not incorporate CI/CD User Stories to the Sprint as required by the grading rubric.  This is why you will see a spike in the chart about at around mid-sprint.
  5. The URL to the burndown chart is: https://miro.com/app/board/o9J_kg1b1Ck=/
@@ -181,7 +189,23 @@ On Friday, Nov 27, we conducted Sprint Review around 9:30pm EST.  The meeting wa
 2. When presented with the Next Steps slide, she was in agreement and in favor of our proposed plan.  During the demo, she was appreciative and did not ask for features outside of our Next Steps.
 
 ### Continuous Integration (5 points)
+1. We have a Continuous Integration system running.
+2. We only work on the main/trunk/master together-there are no long-lived code branches.
+3. The CI system automatically builds our code every time we push to main/trunk/master.
+4. The CI system automatically executes all our tests every time it builds the code.
+5. Evidence that CI system exists and behaves properly:
+
+https://app.circleci.com/pipelines/github/shariq1989/receipt-catcher
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI.png" width="250" alt="CI.png">
 
 ### Continuous Delivery (5 points)
+1. We have a Continuous Delivery systsm running.
+2. When the build is "green", the CD system deploys our software to production environment ("Production"); 
+3. when the build is "red", the CD doesn't alter Production. 
+4. The CD system executes additional tests of our software in Production to ensure Production is up and running successfully after deployment. 
+5. Evidence that CD system exists and behaves properly:
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD.png" width="250" alt="CD.png">
 
 ### Sprint Retrospective (4 points)
