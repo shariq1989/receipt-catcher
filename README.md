@@ -87,10 +87,10 @@ Details of First Sprint can be found in PREVIOUSREADME.md file
 
 ## Second Sprint
 
-### Sprint Planning
+### Sprint Planning (1 point)
 The forecast for the second sprint is 20 story points.
 
-### Forecast Rationale
+### Forecast Rationale (1 point)
 The forecast was an increase from the previous sprint because of a few reasons.  First, we were able to finish the initial setup of the project quicker than our expectation, which allowed us to start thinking about the code and how we are going to accomplish the user stories.  Second, team members were able to complete high story points in a short amount of time during the first sprint.  Thus, at the second Sprint Planning session, the team felt confident that they would be able to achieve higher story points in this second sprint.
 
 ### Sprint Planning Event (4 points)
@@ -138,39 +138,50 @@ On Sunday, Nov 15, the Development Team met and participated in the Sprint Plann
  <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/daily_scrum_11_24.png" width="250"
  alt="daily_scrum_11_24.png">
  
-### Daily Scrum - What did you do?
+### Daily Scrum - What did you do? (5 points)
 Rick: Deployed application to a Linode server. Sent messages to Richard regarding handling project requirements vs stakeholder requests, and resubmitting homework.
 Diah: Kept up with all thread on Slack, Re-did Sprint burndown chart, Calculated the Rubric for Project Part 2 and started gathering evidence to resubmit.
 Remi: Worked on meta-data upload. Files now are uploaded to the database with meta-data. (Handles the create function from CRUD)
 Will: Worked on meteor and Vue learning and playing around with the current code. 
 
-### Daily Scrum - What will you do?
+### Daily Scrum - What will you do? (5 points)
 Rick: I will start working on integrating CI/CD for automated testing and builds
 Remi: I will help in writing and running unit tests for TDD.
 Diah: Create slides for Sprint Review.  Continue to gather evidence to resubmit.  Continue to fill in Project Part 3 rubric.
 
-### Daily Scrum - Any impediments?
+### Daily Scrum - Any impediments? (3 points)
 
 ### Update Sprint Task Board and Burndown Chart (2 points)
 Different members updated the Kanban board on different days as they progress with the assigned stories as seen in the log below:
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/daily_log.png" width="250" alt="daily_log.png">
  
-### Pair- or Mob-Programming
+### Pair- or Mob-Programming (5 points)
 On Monday, Nov 16, Diah, William, and Davey did a mob programming of the UI prototype design.  Diah was sharing her screen and was acting as the Driver while William and Davey were acting as the Navigators.  After the meeting was over, we shared the results of the prototype in the Slack channel for the rest of the team members to see. 
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/mob_11_16.png" width="250" alt="mob_11_16.png">
 
-### Test-Driven Development
+### Test-Driven Development (10 points)
 
-### Sprint Review:
+### Sprint Review (1 point)
+On Friday, Nov 27, we conducted Sprint Review around 9:30pm EST.  The meeting was recorded and the recording has been shared to Richard at richard@kasperowski and Anu at anupreet.saini@gmail.com.  The direct link is here:https://drive.google.com/file/d/1iAYzKZvlIJXppTKp6OgISdEkDTe1FeuP/view?usp=sharing
 
-### Product Increment
+### Product Increment (4 points)
+1. The product is a working software.
+2. It is available on a Linode server available to anyone with a URL link.
+3. If you visit that URL, you will be greeted with the following page:
 
-### Stakeholder Presence
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/receipt_catcher_app.png" width="250" alt="receipt_catcher_app.png">
 
-### Continuous Integration
+4. The URL is: http://96.126.97.44/
 
-### Continuous Delivery
+### Stakeholder Presence (2 points)
 
-### Sprint Retrospective
+1. As evident in the Sprint Review recording, our stakeholder, Tressa Jamil was present at the Sprint Review.
+2. When presented with the Next Steps slide, she was in agreement and in favor of our proposed plan.  During the demo, she was appreciative and did not ask for features outside of our Next Steps.
+
+### Continuous Integration (5 points)
+
+### Continuous Delivery (5 points)
+
+### Sprint Retrospective (4 points)
