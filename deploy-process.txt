@@ -1,0 +1,3 @@
+cd into root/.deploy
+mup setup
+mup deploy
