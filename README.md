@@ -204,6 +204,7 @@ https://app.circleci.com/pipelines/github/shariq1989/receipt-catcher
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI.png" width="250" alt="CI.png">
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI2.png" width="250" alt="CI2.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI3.png" width="250" alt="CI3.png">
 
 ### Continuous Delivery (5 points)
 1. We have a Continuous Delivery systsm running.
