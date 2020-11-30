@@ -221,9 +221,17 @@ CI and CD running automatically for every push to main
 4. The CD system executes additional tests of our software in Production to ensure Production is up and running successfully after deployment. 
 5. Evidence that CD system exists and behaves properly:
 
+Build deployment steps including verification.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD.png" width="300" alt="CD.png">
+
+CI and CD stages run for green builds
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/cicd.png" width="400" alt="cicd.png">
 
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD.png" width="250" alt="CD.png">
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD2.png" width="250" alt="CD2.png">
+Deploy job was not initiated because I added a failing test
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/FAILCD.png" width="400" alt="FAILCD.png">
 
 ### Sprint Retrospective (4 points)
