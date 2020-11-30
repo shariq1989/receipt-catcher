@@ -83,7 +83,7 @@ We used Affinity Group Sizing to estimate the size of the stories and pointed th
 Everyone in the Strawberry team is a development team member so we were all involved in estimating. 
 
 ## First Sprint
-Details of First Sprint can be found in PREVIOUSREADME.md file
+Details of First Sprint can be found in [PREVIOUSREADME.md](https://github.com/shariq1989/receipt-catcher/blob/main/PREVIOUSREADME.md) file
 
 ## Second Sprint
 
