@@ -221,6 +221,24 @@ CI and CD running automatically for every push to main
 4. The CD system executes additional tests of our software in Production to ensure Production is up and running successfully after deployment. 
 5. Evidence that CD system exists and behaves properly:
 
+
+#### Evidence of CD deployments working
+We changed the color of "Select an image" from black to red. Here it is in the original black color.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red1.png" width="300" alt="red1.png">
+
+You can see here that we updated the CSS and pushed the change under commit message "testing CD"
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red3.png" width="300" alt="red3.png">
+
+Here is the corresponding test and deployment for that commit message "testing CD"
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red4.png" width="300" alt="red4.png">
+
+In the same production instance, the color is now red.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red2.png" width="300" alt="red2.png">
+
 Build deployment steps including verification.
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD.png" width="300" alt="CD.png">
@@ -228,7 +246,6 @@ Build deployment steps including verification.
 CI and CD stages run for green builds
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/cicd.png" width="400" alt="cicd.png">
-
 
 Deploy job was not initiated because I added a failing test
 
