@@ -193,6 +193,8 @@ On Sunday, Nov 29, starting around 9:40pm, Remi, Rick, William, and Diah partici
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/mob_11_29.png" width="250" alt="mob_11_29.png">
 
 ### Test-Driven Development (10 points)
+We added new tests to ensure that images of different extensions and sizes can be uploaded using Meteor-Files
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/tests.png" width="250" alt="tests.png">
 
 ### Sprint Review (1 point)
 On Friday, Nov 27, we conducted Sprint Review around 9:30pm EST.  The meeting was recorded and the recording has been shared to Richard at richard@kasperowski and Anu at anupreet.saini@gmail.com.  The direct link is here:https://drive.google.com/file/d/1iAYzKZvlIJXppTKp6OgISdEkDTe1FeuP/view?usp=sharing
