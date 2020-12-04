@@ -25,7 +25,13 @@ export default {
   methods: {},
   meteor: {
     getReceipts() {
-      return Receipts.find({}).fetch();
+      let userID = Meteor.userId();
+      if(userID) {
+        return Receipts.find({userId: userID}).fetch();
+      }
+      else{
+        return {};
+      }
     }
   }
 }
