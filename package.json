@@ -12,12 +12,14 @@
     "bcrypt": "^5.0.0",
     "blob": "^0.1.0",
     "blob-util": "^2.0.2",
+    "components": "^0.1.0",
     "internal": "^2.0.27",
     "jquery": "^3.5.1",
     "meteor-node-stubs": "^1.0.1",
     "node-fetch": "^2.6.1",
     "vue": "^2.6.12",
     "vue-meteor-tracker": "^2.0.0-beta.5",
+    "vue-router": "^3.4.9",
     "vue-template-compiler": "^2.6.12"
   },
   "meteor": {
