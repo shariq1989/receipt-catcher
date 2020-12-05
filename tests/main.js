@@ -74,4 +74,9 @@ describe("receipt-catcher", function () {
             }
         });
     });
+    it("TBD Update Test", async function(){
+      // 1. Upload pre-defined test case
+      // 2. Modify (1) through update method
+      // 3. Check for updates in pre-defined test case
+    });
 });
