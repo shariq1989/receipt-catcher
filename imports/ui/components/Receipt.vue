@@ -1,5 +1,5 @@
 <template>
-    <li>{{ this.receipt._id }}</li>
+    <li><a :href="'/receipts/'+this.receipt._id">{{this.receipt._id}}</a></li>
 </template>
 
 <script>

@@ -19,9 +19,9 @@ const routes = [
     component: ()=>import('/imports/ui/components/NotFound.vue')
   },
   {
-    path: '/receiptId',
+    path: '/receipts/receiptId',
     name: 'receiptDetails',
-    component: ()=>import('/imports/ui/components/Receipt.vue'),
+    component: ()=>import('/imports/ui/components/ReceiptDetails.vue'),
   },
 ]
 

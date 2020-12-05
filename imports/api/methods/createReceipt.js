@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
-import Links from '../collections/Receipts.js';
+import Receipts from '../collections/Receipts.js';
 
 Meteor.methods({
   createReceipt(obj){
