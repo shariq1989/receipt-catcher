@@ -3,11 +3,11 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueMeteorTracker from 'vue-meteor-tracker';
 import '../imports/ui/plugins';
-import App from '../imports/ui/App.vue'
+import App from '../imports/ui/App.vue';
 Vue.use(VueRouter);
 Vue.use(VueMeteorTracker);
 
-export const routes = [
+const routes = [
   {
     path: '/',
     name: 'home',
