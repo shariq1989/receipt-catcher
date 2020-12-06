@@ -18,6 +18,8 @@
       <img :src="image" alt="uploaded image"/>
       <button @click="uploadAnotherReceipt">Upload another</button>
     </div>
+    </br>
+    <a href='/receipts'>My Receipts</a>
   </div>
 </template>
 

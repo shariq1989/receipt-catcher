@@ -11,17 +11,22 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: App,
+    component: ()=>import('/imports/ui/components/Upload.vue'),
   },
   {
-    path: '*',
-    name: 'notfound',
-    component: ()=>import('/imports/ui/components/NotFound.vue')
+    path: '/receipts',
+    name: 'receipts',
+    component: ()=>import('/imports/ui/components/Display.vue'),
   },
   {
     path: '/receipts/receiptId',
     name: 'receiptDetails',
     component: ()=>import('/imports/ui/components/ReceiptDetails.vue'),
+  },
+  {
+    path: '*',
+    name: 'notfound',
+    component: ()=>import('/imports/ui/components/NotFound.vue')
   },
 ]
 
