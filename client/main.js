@@ -7,7 +7,7 @@ import App from '../imports/ui/App.vue'
 Vue.use(VueRouter);
 Vue.use(VueMeteorTracker);
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'home',
