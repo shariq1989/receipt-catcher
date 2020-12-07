@@ -13,6 +13,7 @@
     "blob": "^0.1.0",
     "blob-util": "^2.0.2",
     "components": "^0.1.0",
+    "element-ui": "^2.14.1",
     "internal": "^2.0.27",
     "jquery": "^3.5.1",
     "meteor-node-stubs": "^1.0.1",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@vue/test-utils": "^1.1.1",
+    "babel-plugin-component": "^1.1.1",
     "vue-jest": "^3.0.7"
   },
   "jest": {
