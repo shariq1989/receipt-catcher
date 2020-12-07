@@ -2,12 +2,13 @@
   <div>
     <h2>Receipts Table</h2>
     <ul>
-      <Receipt 
+      <Receipt
         v-for="receipt in getReceipts"
         v-bind:key="receipt._id"
         v-bind:receipt="receipt"
       />
     </ul>
+    <a href='/'>Upload New Receipt</a>
   </div>
 </template>
 
