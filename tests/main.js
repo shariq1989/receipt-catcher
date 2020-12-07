@@ -106,11 +106,11 @@ describe("receipt-catcher", function () {
       // 1. Upload pre-defined test case
       // 2. Modify (1) through update method
       // 3. Check for updates in pre-defined test case
-    });*/
+    });
     it("routerTestRoot",  async function(){
       const router = new VueRouter({routes}); //create test router based on real routes
       //const wrapper = mount(App, {localVue, router}); //make test App
       router.push('/') //go to root path
       assert(window.location.pathname=='/') //check for Upload component at root path as expected.
-    });
+    });*/
 });
