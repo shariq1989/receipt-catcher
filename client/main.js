@@ -3,8 +3,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueMeteorTracker from 'vue-meteor-tracker';
 
-import 
-  { 
+import
+  {
     Button,
     Input,
     Select,
@@ -12,7 +12,7 @@ import
     Form,
     FormItem,
     Upload,
-    Icon
+    Icon,
   } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import lang from 'element-ui/lib/locale/lang/en';
@@ -48,7 +48,7 @@ const routes = [
     component: ()=>import('/imports/ui/components/Display.vue'),
   },
   {
-    path: '/receipts/receiptId',
+    path: '/receipts/:receiptId',
     name: 'receiptDetails',
     component: ()=>import('/imports/ui/components/ReceiptDetails.vue'),
   },
