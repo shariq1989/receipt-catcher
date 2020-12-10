@@ -9,11 +9,21 @@
         <th>Category</th>
         <th>Store Name</th>
         <th>Amount</th>
+        <th>Delete</th>
       </tr>
       </thead>
-      <Receipt v-for="receipt in getReceipts"
-        v-bind:key="receipt._id"
-        v-bind:receipt="receipt"/>
+      <tr v-for="receipt in receipts" v-bind:key="receipt._id"
+          v-bind:receipt="receipt">
+        <td><a :href="'/receipts/'+receipt._id">{{ receipt.name }}</a></td>
+        <td>{{ receipt.meta.date }}</td>
+        <td>{{ receipt.meta.category }}</td>
+        <td>{{ receipt.meta.storeName }}</td>
+        <td>{{ receipt.meta.totalSpent }}</td>
+        <td>
+          <button v-on:click="deleteReceipts(receipt)">X</button>
+        </td>
+      </tr>
+
     </table>
     <br>
     <a href='/'>Upload New Receipt</a>
@@ -29,16 +39,23 @@ export default {
     Receipt
   },
   data() {
-    return {}
+    return {
+      receipts: null,
+    }
   },
-  methods: {},
+  methods: {
+    deleteReceipts(receipt) {
+      console.log(receipt);
+      let res = Receipts.remove(receipt._id);
+      console.log(res);
+    }
+  },
   meteor: {
     getReceipts() {
       let userID = Meteor.userId();
-      if(userID) {
-        return Receipts.find({userId: userID}).fetch();
-      }
-      else{
+      if (userID) {
+        this.receipts = Receipts.find({userId: userID}).fetch();
+      } else {
         return {};
       }
     }
@@ -50,13 +67,23 @@ export default {
 ul {
   font-family: monospace;
 }
+
 table {
   width: 100%;
 }
-table { border: 1px solid black; border-collapse: collapse; }
 
-th, td { padding: 2px 5px; border: 1px solid black; }
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 
-thead { background: #ddd; }
+th, td {
+  padding: 2px 5px;
+  border: 1px solid black;
+}
+
+thead {
+  background: #ddd;
+}
 
 </style>
