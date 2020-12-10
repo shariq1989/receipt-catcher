@@ -2,8 +2,8 @@
   <div>
     <h2>Receipts Table</h2>
     <el-table
-    :data="receipts"
-    style="width: 100%">
+        :data="receipts"
+        style="width: 100%">
       <el-table-column
           prop="name"
           label="Name"
@@ -12,7 +12,7 @@
       <el-table-column
           prop="meta.date"
           label="Date"
-          >
+      >
       </el-table-column>
       <el-table-column
           prop="meta.category"
@@ -26,17 +26,17 @@
           prop="meta.totalSpent"
           label="Total Spent">
       </el-table-column>
-      <tr v-for="receipt in receipts" v-bind:key="receipt._id"
-          v-bind:receipt="receipt">
-        <td><a :href="'/receipts/'+receipt._id">{{ receipt.name }}</a></td>
-        <td>{{ receipt.meta.date }}</td>
-        <td>{{ receipt.meta.category }}</td>
-        <td>{{ receipt.meta.storeName }}</td>
-        <td>{{ receipt.meta.totalSpent }}</td>
-        <td>
-          <button v-on:click="deleteReceipts(receipt)">X</button>
-        </td>
-      </tr>
+      <el-table-column
+          label="Delete">
+        <template slot-scope="scope">
+          <el-button
+              @click.native.prevent="deleteReceipts(scope.row)"
+              type="text"
+              size="small">
+            Remove
+          </el-button>
+        </template>
+      </el-table-column>
     </el-table>
     <br>
     <a href='/'>Upload New Receipt</a>
@@ -58,6 +58,7 @@ export default {
   },
   methods: {
     deleteReceipts(receipt) {
+      console.log(receipt);
       Receipts.remove({_id: receipt._id}, (error) => {
         if (error) {
           console.error(`File wasn't removed, error:  ${error.reason}`);
