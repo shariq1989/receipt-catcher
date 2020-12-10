@@ -12,19 +12,23 @@
       <el-table-column
           prop="meta.date"
           label="Date"
+          sortable
           >
       </el-table-column>
       <el-table-column
           prop="meta.category"
-          label="Category">
+          label="Category"
+          sortable>
       </el-table-column>
       <el-table-column
           prop="meta.storeName"
-          label="Store Name">
+          label="Store Name"
+          sortable>
       </el-table-column>
       <el-table-column
           prop="meta.totalSpent"
-          label="Total Spent">
+          label="Total Spent"
+          sortable>
       </el-table-column>
       <tr v-for="receipt in receipts" v-bind:key="receipt._id"
           v-bind:receipt="receipt">
