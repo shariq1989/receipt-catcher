@@ -12,19 +12,23 @@
       <el-table-column
           prop="meta.date"
           label="Date"
-      >
+          sortable
+          >
       </el-table-column>
       <el-table-column
           prop="meta.category"
-          label="Category">
+          label="Category"
+          sortable>
       </el-table-column>
       <el-table-column
           prop="meta.storeName"
-          label="Store Name">
+          label="Store Name"
+          sortable>
       </el-table-column>
       <el-table-column
           prop="meta.totalSpent"
-          label="Total Spent">
+          label="Total Spent"
+          sortable>
       </el-table-column>
       <el-table-column
           label="Delete">
@@ -58,7 +62,6 @@ export default {
   },
   methods: {
     deleteReceipts(receipt) {
-      console.log(receipt);
       Receipts.remove({_id: receipt._id}, (error) => {
         if (error) {
           console.error(`File wasn't removed, error:  ${error.reason}`);
