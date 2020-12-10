@@ -5,15 +5,22 @@
         :data="receipts"
         style="width: 100%">
       <el-table-column
-          prop="name"
           label="Name"
       >
+        <template slot-scope="scope">
+          <el-button
+              @click.native.prevent="openImage(scope.row)"
+              type="text"
+              size="small">
+            {{ scope.row.name }}
+          </el-button>
+        </template>
       </el-table-column>
       <el-table-column
           prop="meta.date"
           label="Date"
           sortable
-          >
+      >
       </el-table-column>
       <el-table-column
           prop="meta.category"
@@ -69,6 +76,10 @@ export default {
           console.info('File successfully removed');
         }
       });
+    },
+    openImage(receipt) {
+      let link = Receipts.findOne({_id: receipt._id}).link();
+      window.open(link);
     }
   },
   meteor: {
