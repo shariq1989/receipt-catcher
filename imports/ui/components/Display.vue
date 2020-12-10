@@ -1,17 +1,31 @@
 <template>
   <div>
     <h2>Receipts Table</h2>
-    <table>
-      <thead>
-      <tr>
-        <th>Receipt</th>
-        <th>Date</th>
-        <th>Category</th>
-        <th>Store Name</th>
-        <th>Amount</th>
-        <th>Delete</th>
-      </tr>
-      </thead>
+    <el-table
+    :data="receipts"
+    style="width: 100%">
+      <el-table-column
+          prop="name"
+          label="Name"
+      >
+      </el-table-column>
+      <el-table-column
+          prop="meta.date"
+          label="Date"
+          >
+      </el-table-column>
+      <el-table-column
+          prop="meta.category"
+          label="Category">
+      </el-table-column>
+      <el-table-column
+          prop="meta.storeName"
+          label="Store Name">
+      </el-table-column>
+      <el-table-column
+          prop="meta.totalSpent"
+          label="Total Spent">
+      </el-table-column>
       <tr v-for="receipt in receipts" v-bind:key="receipt._id"
           v-bind:receipt="receipt">
         <td><a :href="'/receipts/'+receipt._id">{{ receipt.name }}</a></td>
@@ -23,8 +37,7 @@
           <button v-on:click="deleteReceipts(receipt)">X</button>
         </td>
       </tr>
-
-    </table>
+    </el-table>
     <br>
     <a href='/'>Upload New Receipt</a>
   </div>

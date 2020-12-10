@@ -13,6 +13,8 @@ import
     FormItem,
     Upload,
     Icon,
+    Table,
+    TableColumn
   } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import lang from 'element-ui/lib/locale/lang/en';
@@ -35,6 +37,8 @@ Vue.component(Form.name, Form);
 Vue.component(FormItem.name, FormItem);
 Vue.component(Upload.name, Upload);
 Vue.component(Icon.name, Icon);
+Vue.component(Table.name, Table);
+Vue.component(TableColumn.name,TableColumn);
 
 const routes = [
   {
