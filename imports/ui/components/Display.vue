@@ -45,9 +45,13 @@ export default {
   },
   methods: {
     deleteReceipts(receipt) {
-      console.log(receipt);
-      let res = Receipts.remove(receipt._id);
-      console.log(res);
+      Receipts.remove({_id: receipt._id}, (error) => {
+        if (error) {
+          console.error(`File wasn't removed, error:  ${error.reason}`);
+        } else {
+          console.info('File successfully removed');
+        }
+      });
     }
   },
   meteor: {
