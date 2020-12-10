@@ -1,82 +1,108 @@
 <template>
   <div>
     <!-- Upload receipt form -->
-    <div v-if="!image">
+    <div>
       <h2>Select an image</h2>
-      <div id="ReceiptForm">
-        <form @submit="formSubmit">
-          <input id="file" type="file" ><br>
-          <label for="Store">Store Name: </label><input type="text" id="Store"><br>
-          <label for="Date">Date of Purchase: </label><input type="date" id="Date" ref="Date"><br>
-          <label for="Total">Total Spent: </label><input type="text" id="Total"><br>
-          <label for="Category">Category: </label><input type="text" id="Category"><br>
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+      <el-form 
+        label-position="right" 
+        label-width="120px" 
+        :model="formModel">
+
+        <el-form-item label="Image">
+          <el-upload
+            ref="upload"
+            action="#"
+            :auto-upload="false"
+            :multiple="false"
+            :limit="1"
+            :on-change="setFileUrl">
+            <el-button slot="trigger" size="small" type="primary">Select File</el-button>
+            <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
+          </el-upload>
+        </el-form-item>
+        <el-form-item label="Store">
+          <el-input
+            id="store"
+            type="text"
+            v-model="formModel.store"
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="Date">
+          <el-date-picker
+            id="date"
+            type="date"
+            placeholder="Pick a day"
+            v-model="formModel.date"
+            :pickerOptions="pickerOptions"
+          ></el-date-picker>
+        </el-form-item>
+        <el-form-item label="Total">
+          <el-input
+            id="total"
+            type="text"
+            v-model="formModel.total"
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="Category">
+          <el-input
+            id="category"
+            type="text"
+            v-model="formModel.category"
+          ></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="formSubmit">Submit</el-button>
+        </el-form-item>
+      </el-form>
     </div>
-    <div v-else>
-      <img :src="image" alt="uploaded image"/>
-      <button @click="uploadAnotherReceipt">Upload another</button>
-    </div>
-    </br>
-    <a href='/receipts'>My Receipts</a>
   </div>
 </template>
 
 <script>
 import {Receipts} from "../../api/collections/Receipts";
+import { Form, Input } from '../../../client/main.js'
 
 export default {
   data() {
     return {
-      counter: 0,
-      image: null
+      pickerOptions: {
+        disabledDate(time) {
+          return time.getTime() > Date.now();
+        }
+      },
+      formModel: {
+        image: "",
+        store: "",
+        date: "",
+        total: "",
+        category: ""
+      }
     }
   },
-  mounted() {
-    let today = new Date(),
-        dd = today.getDate(),
-        mm = today.getMonth()+1,
-        yyyy = today.getFullYear();
-
-    dd = dd < 10 ? dd='0'+dd : dd;
-
-    mm = mm < 10 ? mm='0'+mm : mm;
-
-    today = yyyy+'-'+mm+'-'+dd;
-
-    let date = this.$refs.Date;
-    date.setAttribute('max',today);
-  },
   methods: {
+    setFileUrl(file, fileList) {
+      this.formModel.image = fileList[0].raw;
+    },
     formSubmit(e) {
       e.preventDefault();
-      //get values from form
-      const Store = e.target.Store.value;
-      const Total = e.target.Total.value;
-      const Date = e.target.Date.value;
-      const Category = e.target.Category.value;
-      let file = e.target.file.files[0];
       //Create JSON object
       let data = {
-        "Store": Store,
-        "Total": Total,
-        "Date": Date,
-        "Category": Category,
-        "file": file,
+        "Store": this.formModel.store,
+        "Total": this.formModel.total,
+        "Date": this.formModel.date,
+        "Category": this.formModel.category,
+        "image": this.formModel.image,
       };
       //console.log(data); //Confirm form data
       // Submit to database
       this.uploadReceipt(data);
     },
     uploadAnotherReceipt: function () {
-      this.image = null;
+      this.formModel.image = null;
     },
     uploadReceipt(obj) {
-      let image = obj.file;
-      console.log(image);
       let upload = Receipts.insert({
-        file: image,
+        file: obj.image,
         meta: {
           "category": obj.Category,
           "date": obj.Date,
@@ -102,7 +128,8 @@ export default {
       });
       upload.start();
       // Clear form
-      this.image = null;
+      this.formModel.image = null;
+      this.$refs.upload.clearFiles();
     }
   },
 }
