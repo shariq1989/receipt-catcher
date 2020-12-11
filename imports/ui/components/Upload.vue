@@ -1,23 +1,34 @@
 <template>
   <div>
     <!-- Upload receipt form -->
-    <div v-if="!image">
       <h2>Select an image</h2>
-      <div id="ReceiptForm">
-        <form @submit="formSubmit">
-          <input id="file" type="file" ><br>
-          <label for="Store">Store Name: </label><input type="text" id="Store"><br>
-          <label for="Date">Date of Purchase: </label><input type="date" id="Date" ref="Date"><br>
-          <label for="Total">Total Spent: </label><input type="text" id="Total"><br>
-          <label for="Category">Category: </label><input type="text" id="Category"><br>
-          <input type="submit" value="Submit">
-        </form>
-      </div>
-    </div>
-    <div v-else>
-      <img :src="image" alt="uploaded image"/>
-      <button @click="uploadAnotherReceipt">Upload another</button>
-    </div>
+    <el-form label-width="200px">
+      <el-upload
+          class="upload-demo"
+          action="placeholder"
+          :limit="1">
+        <el-button id="file" size="small" type="file">Click to upload</el-button>
+        <span slot="tip" class="el-upload__tip"> png/jpg/jpeg files, with size less than 10MB</span>
+      </el-upload>
+      <el-form-item label="Store name">
+        <el-input for="Store" id="Store"></el-input>
+      </el-form-item>
+      <el-form-item label="Date of Purchase">
+        <el-date-picker
+            for="Date" id="Date"
+            type="date">
+        </el-date-picker>
+      </el-form-item>
+      <el-form-item label="Total Spent">
+        <el-input for="Total" id="Total"></el-input>
+      </el-form-item>
+      <el-form-item label="Category">
+        <el-input for="Category" id="Category"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="submit" @click="formSubmit">Submit</el-button>
+      </el-form-item>
+    </el-form>
     </br>
     <a href='/receipts'>My Receipts</a>
   </div>
@@ -34,7 +45,7 @@ export default {
     }
   },
   mounted() {
-    let today = new Date(),
+/*    let today = new Date(),
         dd = today.getDate(),
         mm = today.getMonth()+1,
         yyyy = today.getFullYear();
@@ -46,7 +57,7 @@ export default {
     today = yyyy+'-'+mm+'-'+dd;
 
     let date = this.$refs.Date;
-    date.setAttribute('max',today);
+    date.setAttribute('max',today);*/
   },
   methods: {
     formSubmit(e) {

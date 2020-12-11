@@ -96,26 +96,5 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  font-family: monospace;
-}
-
-table {
-  width: 100%;
-}
-
-table {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 2px 5px;
-  border: 1px solid black;
-}
-
-thead {
-  background: #ddd;
-}
 
 </style>
