@@ -6,17 +6,18 @@ import VueMeteorTracker from 'vue-meteor-tracker';
 import
   {
     Button,
-    Input,
-    Select,
     DatePicker,
     Form,
     FormItem,
-    Upload,
     Icon,
+    Input,
+    Menu,
+    MenuItem,
+    Select,
     Table,
-    TableColumn
+    TableColumn,
+    Upload
   } from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 import lang from 'element-ui/lib/locale/lang/en';
 import locale from 'element-ui/lib/locale';
 
@@ -39,6 +40,8 @@ Vue.component(Upload.name, Upload);
 Vue.component(Icon.name, Icon);
 Vue.component(Table.name, Table);
 Vue.component(TableColumn.name,TableColumn);
+Vue.component(Menu.name, Menu);
+Vue.component(MenuItem.name, MenuItem);
 
 const routes = [
   {
