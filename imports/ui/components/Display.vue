@@ -6,15 +6,13 @@
         style="width: 100%">
       <el-table-column
           label="Name"
+          prop="name"
       >
-        <template slot-scope="scope">
-          <el-button
-              @click.native.prevent="openImage(scope.row)"
-              type="text"
-              size="small">
-            {{ scope.row.name }}
-          </el-button>
-        </template>
+      <template slot-scope="scope">
+          <span class="name">
+            <a :href="'/receipts/'+scope.row._id">{{ scope.row.name }}</a>
+          </span>
+      </template>
       </el-table-column>
       <el-table-column
           prop="meta.date"
