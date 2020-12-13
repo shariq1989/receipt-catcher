@@ -89,7 +89,7 @@ export default {
       let data = {
         "Store": this.formModel.store,
         "Total": this.formModel.total,
-        "Date": this.formModel.date,
+        "Date1": this.formModel.date.toISOString().substring(0,10),
         "Category": this.formModel.category,
         "image": this.formModel.image,
       };
@@ -105,7 +105,7 @@ export default {
         file: obj.image,
         meta: {
           "category": obj.Category,
-          "date": obj.Date,
+          "date": obj.Date1,
           "storeName": obj.Store,
           "totalSpent": obj.Total,
         },
