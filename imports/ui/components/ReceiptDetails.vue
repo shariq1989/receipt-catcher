@@ -117,13 +117,18 @@ export default {
       this.deleteReceipts();
     },
     deleteReceipts() {
-      Receipts.remove({_id: this.formModel.id}, (error) => {
-        if (error) {
-          alert(`File wasn't removed, error:  ${error.reason}`);
-        } else {
-          this.replaceReceipt();
-        }
-      });
+      if(this.formModel.file !== null) {
+        Receipts.remove({_id: this.formModel.id}, (error) => {
+          if (error) {
+            alert(`File wasn't removed, error:  ${error.reason}`);
+          } else {
+            this.replaceReceipt();
+          }
+        });
+      }
+      else{
+        alert('Please reupload file to update');
+      }
     },
     replaceReceipt() {
       let upload = Receipts.insert({
@@ -131,7 +136,7 @@ export default {
         fileId: this.formModel.id,
         meta: {
           "category": this.formModel.category,
-          "date": this.formModel.date.toISOString().substring(0,10),
+          "date": this.formModel.date,
           "storeName": this.formModel.store,
           "totalSpent": this.formModel.total,
         },
