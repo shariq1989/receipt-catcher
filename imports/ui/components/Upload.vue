@@ -60,7 +60,6 @@
 
 <script>
 import {Receipts} from "../../api/collections/Receipts";
-import { Form, Input } from '../../../client/main.js'
 
 export default {
   data() {

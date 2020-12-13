@@ -15,8 +15,6 @@
 </template>
 
 <script>
-import { Menu, MenuItem } from '../../../client/main.js'
-import VueRouter from '../../../client/main.js';
 
 export default {
   data() {
