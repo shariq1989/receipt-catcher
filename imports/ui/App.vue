@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Receipt Catcher</h1>
+    <header>
+      <h1>Receipt Catcher</h1>
+    </header>
     <nav-menu/>
     <template v-if="currentUser">
       <router-view/>
@@ -30,7 +32,13 @@ export default {
 
 <style>
   body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     padding: 10px;
+  }
+  h1{
+    font-family: Georgia, sans-serif;
+    font-size: 3em;
+    letter-spacing: -2px;
+    color: darkcyan;
   }
 </style>
