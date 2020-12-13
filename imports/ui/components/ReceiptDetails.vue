@@ -64,7 +64,18 @@ export default {
       };
       console.log(data); //Confirm form data
       // Submit to database
-      this.updateReceipt(data);
+      this.deleteReceipts(data);
+      setTimeout(this.updateReceipt(data), 3000)
+
+    },
+    deleteReceipts(receipt) {
+      Receipts.remove({_id: receipt.Id}, (error) => {
+        if (error) {
+          console.error(`File wasn't removed, error:  ${error.reason}`);
+        } else {
+          console.info('File successfully removed');
+        }
+      });
     },
     updateReceipt(obj) {
       let upload = Receipts.insert({
