@@ -2,13 +2,13 @@
   <div>
 
     <h2>Details</h2>
-    <div id='metadata'>
-      <p>Store Name:</p>
-      <p>Date:</p>
-      <p>Category:</p>
-      <p>Total Spent:</p>
-      <img src=SomeImagePathHere></img> <!-- NEEDS A WORKING IMAGE PATH -->
 
+    <div v-if="this.receipts[0] !== undefined" id='metadata'>
+      <p>Store Name:</p> {{this.receipts[0].meta.storeName}}
+      <p>Date:</p> {{this.receipts[0].meta.date}}
+      <p>Category:</p> {{this.receipts[0].meta.category}}
+      <p>Total Spent:</p> {{this.receipts[0].meta.totalSpent}}
+      <img src=SomeImagePathHere></img> <!-- NEEDS A WORKING IMAGE PATH -->
       <!-- <el-button>Edit</el-button> -->
     </div>
     <a href="/receipts">Return to Table</a>
@@ -32,9 +32,13 @@ export default {
 
   },
   meteor: {
-    getReceipt(){
+    getReceipts() {
       let receiptId = window.location.pathname.split('/')[2];
-      this.receipts = Receipts.find({_id: receiptId}).fetch();
+      if (receiptId) {
+        this.receipts = Receipts.find({_id: receiptId}).fetch();
+      } else {
+        return {};
+      }
     }
   }
 }
