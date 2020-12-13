@@ -24,6 +24,9 @@
           <el-input
             id="store"
             type="text"
+            minlength="1"
+            maxlength="50"
+            style="width: 20%"
             v-model="formModel.store"
           ></el-input>
         </el-form-item>
@@ -39,7 +42,10 @@
         <el-form-item label="Total">
           <el-input
             id="total"
-            type="text"
+            type="number"
+            min="0"
+            step=".01"
+            style="width: 20%"
             v-model="formModel.total"
           ></el-input>
         </el-form-item>
@@ -47,6 +53,9 @@
           <el-input
             id="category"
             type="text"
+            minlength="1"
+            maxlength="50"
+            style="width: 20%"
             v-model="formModel.category"
           ></el-input>
         </el-form-item>
@@ -141,11 +150,4 @@ img {
   margin: auto auto 10px;
 }
 
-p {
-  font-family: serif;
-}
-
-p {
-  font-family: serif;
-}
 </style>
