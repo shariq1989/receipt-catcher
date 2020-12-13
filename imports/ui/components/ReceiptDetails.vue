@@ -11,11 +11,11 @@
     <div v-if="this.editing == 1">
       <p>Update Form Goes Here</p>
       <form @submit="formSubmit">
-        <input id="file" type="file"><br>
-        <label for="Store">Store Name: </label><input type="text" id="Store"><br>
-        <label for="Date">Date of Purchase: </label><input type="date" id="Date" ref="Date"><br>
-        <label for="Total">Total Spent: </label><input type="text" id="Total"><br>
-        <label for="Category">Category: </label><input type="text" id="Category"><br>
+        <input id="file" type="file"> <p>Must add file, even if not updating</p><br>
+        <label for="Store">Store Name: </label><input type="text" id="Store" :value="this.receipts[0].storeName"><br>
+        <label for="Date">Date of Purchase: </label><input type="date" id="Date" ref="Date" :value="this.receipts[0].date"><br>
+        <label for="Total">Total Spent: </label><input type="text" id="Total" :value="this.receipts[0].totalSpent"><br>
+        <label for="Category">Category: </label><input type="text" id="Category" :value="this.receipts[0].category"><br>
         <input type='hidden' id='Id' :value="this.receipts[0]._id">
         <input type="submit" value="Submit">
       </form>
@@ -64,7 +64,18 @@ export default {
       };
       console.log(data); //Confirm form data
       // Submit to database
-      this.updateReceipt(data);
+      this.deleteReceipts(data);
+      setTimeout(this.updateReceipt(data), 3000)
+
+    },
+    deleteReceipts(receipt) {
+      Receipts.remove({_id: receipt.Id}, (error) => {
+        if (error) {
+          console.error(`File wasn't removed, error:  ${error.reason}`);
+        } else {
+          console.info('File successfully removed');
+        }
+      });
     },
     updateReceipt(obj) {
       let upload = Receipts.insert({
