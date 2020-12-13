@@ -33,10 +33,4 @@ export default {
     font-family: sans-serif;
     padding: 10px;
   }
-  #login-buttons {
-    margin-bottom: 5px;
-  }
-  #login-buttons a {
-    text-decoration: none;
-  }
 </style>

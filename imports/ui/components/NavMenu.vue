@@ -36,4 +36,10 @@ export default {
   .login-link-text {
     padding: 18px 0;
   }
+  #login-buttons {
+    margin-bottom: 5px;
+  }
+  #login-buttons a {
+    text-decoration: none;
+  }
 </style>

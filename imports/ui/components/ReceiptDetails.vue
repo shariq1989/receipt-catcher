@@ -1,29 +1,69 @@
 <template>
   <div>
-    <h2>Details</h2>
-    <div v-if="this.receipts[0] !== undefined  & this.editing == 0" id='metadata'>
-      <p>Store Name: {{this.receipts[0].meta.storeName}}</p>
-      <p>Date: {{this.receipts[0].meta.date}}</p>
-      <p>Category: {{this.receipts[0].meta.category}}</p>
-      <p>Total Spent: {{this.receipts[0].meta.totalSpent}}</p>
-
-    </div>
-    <div v-if="this.editing == 1">
-      <p>Update Form Goes Here</p>
-      <form @submit="formSubmit">
-        <input id="file" type="file"> <p>Must add file, even if not updating</p><br>
-        <label for="Store">Store Name: </label><input type="text" id="Store" :value="this.receipts[0].storeName"><br>
-        <label for="Date">Date of Purchase: </label><input type="date" id="Date" ref="Date" :value="this.receipts[0].date"><br>
-        <label for="Total">Total Spent: </label><input type="text" id="Total" :value="this.receipts[0].totalSpent"><br>
-        <label for="Category">Category: </label><input type="text" id="Category" :value="this.receipts[0].category"><br>
-        <input type='hidden' id='Id' :value="this.receipts[0]._id">
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-    <el-button @click.native.prevent="Editing()">Edit</el-button>
-    <div>
-      <a href="/receipts">Return to Table</a>
-    </div>
+    <h2>Receipt Details</h2>
+    <el-form 
+      label-position="right" 
+      label-width="120px" 
+      :model="formModel"
+    >
+      <el-form-item label="Image">
+        <el-upload
+          ref="upload"
+          action="#"
+          :disabled="!editing" 
+          :auto-upload="false"
+          :multiple="false"
+          :limit="1"
+          :on-change="setFileUrl">
+          <el-button slot="trigger" :disabled="!editing" size="small" type="primary">Select File</el-button>
+          <div class="el-upload__tip" slot="tip">
+            jpg/png files with a size less than 500kb<br>
+            <em>Must add file, even if not updating</em>
+          </div>
+        </el-upload>
+      </el-form-item>
+      <el-form-item label="Store Name">
+        <el-input 
+          id="store" 
+          type="text" 
+          :disabled="!editing" 
+          v-model="formModel.store"
+        ></el-input>
+      </el-form-item>
+      <el-form-item label="Date">
+        <el-date-picker
+          id="date"
+          type="date"
+          :disabled="!editing" 
+          placeholder="Pick a day"
+          v-model="formModel.date"
+          :pickerOptions="pickerOptions"
+        ></el-date-picker>
+      </el-form-item>
+      <el-form-item label="Total Spent">
+        <el-input 
+          id="total" 
+          type="text" 
+          :disabled="!editing" 
+          v-model="formModel.total"
+        ></el-input>
+      </el-form-item>
+      <el-form-item label="Category">
+        <el-input 
+          id="category" 
+          type="text" 
+          :disabled="!editing" 
+          v-model="formModel.category"
+          ></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button v-if="!editing" type="primary" @click.native.prevent="toggleEditing()">Edit</el-button>
+        <div v-else>
+          <el-button type="primary" @click="formSubmit">Submit</el-button>
+          <el-button type="info" plain @click.native.prevent="toggleEditing()">Cancel</el-button>
+        </div>
+      </el-form-item>
+    </el-form>
   </div>
 </template>
 
@@ -37,86 +77,96 @@ export default {
   },
   data() {
     return {
-      receipts: null,
-      editing: 0,
+      receipt: null,
+      editing: false,
+      pickerOptions: {
+        disabledDate(time) {
+          return time.getTime() > Date.now();
+        }
+      },
+      formModel: {
+        "store": "",
+        "total": "",
+        "date": "",
+        "category": "",
+        "id": "",
+        "file": null
+      }
+    }
+  },
+  watch: {
+    receipt: function(newReceipt, oldReceipt) {
+      if (newReceipt && newReceipt.meta) {
+        this.formModel.store = newReceipt.meta.storeName;
+        this.formModel.date = newReceipt.meta.date;
+        this.formModel.category = newReceipt.meta.category;
+        this.formModel.total = newReceipt.meta.totalSpent;
+      }
     }
   },
   methods: {
-    Editing(){
-      if (this.editing==0){
-        this.editing=1;
-      }
-      else{
-        this.editing=0;
-      }
-      console.log(this.editing)
+    setFileUrl(file, fileList) {
+      this.formModel.file = fileList[0].raw;
+    },
+    toggleEditing() {
+      this.editing = !this.editing;
     },
     formSubmit(e) {
       e.preventDefault();
-      //Create JSON object from form data
-      let data = {
-        "Store": e.target.Store.value,
-        "Total": e.target.Total.value,
-        "Date": e.target.Date.value,
-        "Category": e.target.Category.value,
-        "Id": e.target.Id.value,
-        "file": e.target.file.files[0],
-      };
-      console.log(data); //Confirm form data
       // Submit to database
-      this.deleteReceipts(data);
-      setTimeout(this.updateReceipt(data), 3000)
-
+      this.deleteReceipts();
     },
-    deleteReceipts(receipt) {
-      Receipts.remove({_id: receipt.Id}, (error) => {
+    deleteReceipts() {
+      Receipts.remove({_id: this.formModel.id}, (error) => {
         if (error) {
-          console.error(`File wasn't removed, error:  ${error.reason}`);
+          alert(`File wasn't removed, error:  ${error.reason}`);
         } else {
-          console.info('File successfully removed');
+          this.replaceReceipt();
         }
       });
     },
-    updateReceipt(obj) {
+    replaceReceipt() {
       let upload = Receipts.insert({
-        file: obj.file,
-        fileId: obj.Id,
+        file: this.formModel.file,
+        fileId: this.formModel.id,
         meta: {
-          "category": obj.Category,
-          "date": obj.Date,
-          "storeName": obj.Store,
-          "totalSpent": obj.Total,
+          "category": this.formModel.category,
+          "date": this.formModel.date.toISOString().substring(0,10),
+          "storeName": this.formModel.store,
+          "totalSpent": this.formModel.total,
         },
         streams: 'dynamic',
         chunkSize: 'dynamic',
       }, false);
-      upload.on('start', function () {
-        //TODO: Sets upload progress
-        //template.currentUpload.set(this);
-      });
       upload.on('end', function (error, fileObj) {
         if (error) {
           alert(`Error during upload: ${error}`);
         } else {
           alert(`File "${fileObj.name}" successfully uploaded`);
         }
-        // removes upload progress
-        //template.currentUpload.set(false);
       });
       upload.start();
       // Clear form
-      this.image = null;
+      this.$refs.upload.clearFiles();
+      this.toggleEditing();
     }
   },
   meteor: {
     getReceipts() {
       let receiptId = window.location.pathname.split('/')[2];
       if (receiptId) {
-        this.receipts = Receipts.find({_id: receiptId}).fetch();
+        this.formModel.id = receiptId;
+        this.receipt = Receipts.find({_id: receiptId}).fetch()[0];
       } else {
-        return {};
+        return;
       }
     }
   }
 }
 </script>
+
+<style>
+.el-input.is-disabled .el-input__inner {
+  color: #606266;
+}
+</style>

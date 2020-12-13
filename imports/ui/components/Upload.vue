@@ -93,29 +93,20 @@ export default {
     },
     formSubmit(e) {
       e.preventDefault();
-      //Create JSON object
-      let data = {
-        "Store": this.formModel.store,
-        "Total": this.formModel.total,
-        "Date1": this.formModel.date.toISOString().substring(0,10),
-        "Category": this.formModel.category,
-        "image": this.formModel.image,
-      };
-      //console.log(data); //Confirm form data
       // Submit to database
-      this.uploadReceipt(data);
+      this.uploadReceipt();
     },
     uploadAnotherReceipt: function () {
       this.formModel.image = null;
     },
-    uploadReceipt(obj) {
+    uploadReceipt() {
       let upload = Receipts.insert({
-        file: obj.image,
+        file: this.formModel.image,
         meta: {
-          "category": obj.Category,
-          "date": obj.Date1,
-          "storeName": obj.Store,
-          "totalSpent": obj.Total,
+          "category": this.formModel.category,
+          "date": this.formModel.date.toISOString().substring(0,10),
+          "storeName": this.formModel.store,
+          "totalSpent": this.formModel.total,
         },
         streams: 'dynamic',
         chunkSize: 'dynamic',
@@ -131,13 +122,15 @@ export default {
         } else {
           alert(`File "${fileObj.name}" successfully uploaded`);
         }
-        // removes upload progress
-        //template.currentUpload.set(false);
       });
       upload.start();
       // Clear form
-      this.formModel.image = null;
       this.$refs.upload.clearFiles();
+      this.formModel.image = null;
+      this.formModel.total = "";
+      this.formModel.category = "";
+      this.formModel.date = "";
+      this.formModel.store = "";
     }
   },
 }

@@ -49,8 +49,6 @@
         </template>
       </el-table-column>
     </el-table>
-    <br>
-    <a href='/'>Upload New Receipt</a>
   </div>
 </template>
 
