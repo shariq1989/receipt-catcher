@@ -65,98 +65,98 @@ describe("receipt-catcher", function () {
         it("server is not client", function () {
             assert.strictEqual(Meteor.isClient, false);
         });
+        it("request collection exists", async function () {
+            let collection;
+            collection = Receipts.collection;
+            assert(collection !== null);
+        });
+        it("insert png", async function () {
+            // Upload sample files on server's startup:
+            Receipts.load('https://raw.githubusercontent.com/VeliovGroup/Meteor-Files/master/logo.png', {
+                fileName: 'logo.png'
+            }, function (writeError, fileRef) {
+                if (writeError) {
+                    throw writeError;
+                } else {
+                    assert(fileRef._id !== null);
+                }
+            });
+        });
+        it("insert jpeg", async function () {
+            // Upload sample files on server's startup:
+            Receipts.load('https://image.shutterstock.com/image-vector/credit-card-icon-600w-397400254.jpg', {
+                fileName: 'jpeg img'
+            }, function (writeError, fileRef) {
+                if (writeError) {
+                    throw writeError;
+                } else {
+                    assert(fileRef._id !== null);
+                }
+            });
+        });
+        it("insert gif", async function () {
+            // Upload sample files on server's startup:
+            Receipts.load('https://media3.giphy.com/media/BfbUe877N4xsUhpcPc/giphy.gif?cid=ecf05e47olmz6aso6rvn28w3dy8401e7jqs2auavdfpmx0rf&rid=giphy.gif', {
+                fileName: 'gif img'
+            }, function (writeError, fileRef) {
+                if (writeError) {
+                    throw writeError;
+                } else {
+                    assert(fileRef._id !== null);
+                }
+            });
+        });
+        it("insert large image", async function () {
+            // Upload sample files on server's startup:
+            Receipts.load('https://upload.wikimedia.org/wikipedia/commons/4/4e/Pleiades_large.jpg', {
+                fileName: 'gif img'
+            }, function (writeError, fileRef) {
+                if (writeError) {
+                    throw writeError;
+                } else {
+                    assert(fileRef._id !== null);
+                }
+            });
+        });
+        it("insert pdf", async function () {
+            // Upload sample files on server's startup:
+            Receipts.load('http://www.africau.edu/images/default/sample.pdf', {
+                fileName: 'pdf file'
+            }, function (writeError, fileRef) {
+                if (writeError) {
+                    throw writeError;
+                } else {
+                    assert(fileRef._id !== null);
+                }
+            });
+        });
+        it("insert exe", async function () {
+            // Upload sample files on server's startup:
+            Receipts.load('http://www.lancsngfl.ac.uk/cmsmanual/getfile.php?src=9/JRuler.exe', {
+                fileName: 'exe file'
+            }, function (writeError, fileRef) {
+                if (writeError) {
+                    throw writeError;
+                } else {
+                    assert(fileRef._id !== null);
+                }
+            });
+        });
+        it("delete image", function (done) {
+            // need this timeout because we need to wait until the images are uploaded
+            setTimeout(async function () {
+                // get all files in test db
+                let result = runFetch();
+                // get the id of the first one
+                const id = result[0]._id;
+                // remove file by id
+                Receipts.remove({id: id});
+                // check to see if its still in the db
+                result = runFetch(id);
+                // it shouldn't be there, result will be empty
+                assert(result.length === 0);
+                done();
+            }, 3000)
+        });
     }
-    it("request collection exists", async function () {
-        let collection;
-        collection = Receipts.collection;
-        assert(collection !== null);
-    });
-    it("insert png", async function () {
-        // Upload sample files on server's startup:
-        Receipts.load('https://raw.githubusercontent.com/VeliovGroup/Meteor-Files/master/logo.png', {
-            fileName: 'logo.png'
-        }, function (writeError, fileRef) {
-            if (writeError) {
-                throw writeError;
-            } else {
-                assert(fileRef._id !== null);
-            }
-        });
-    });
-    it("insert jpeg", async function () {
-        // Upload sample files on server's startup:
-        Receipts.load('https://image.shutterstock.com/image-vector/credit-card-icon-600w-397400254.jpg', {
-            fileName: 'jpeg img'
-        }, function (writeError, fileRef) {
-            if (writeError) {
-                throw writeError;
-            } else {
-                assert(fileRef._id !== null);
-            }
-        });
-    });
-    it("insert gif", async function () {
-        // Upload sample files on server's startup:
-        Receipts.load('https://media3.giphy.com/media/BfbUe877N4xsUhpcPc/giphy.gif?cid=ecf05e47olmz6aso6rvn28w3dy8401e7jqs2auavdfpmx0rf&rid=giphy.gif', {
-            fileName: 'gif img'
-        }, function (writeError, fileRef) {
-            if (writeError) {
-                throw writeError;
-            } else {
-                assert(fileRef._id !== null);
-            }
-        });
-    });
-    it("insert large image", async function () {
-        // Upload sample files on server's startup:
-        Receipts.load('https://upload.wikimedia.org/wikipedia/commons/4/4e/Pleiades_large.jpg', {
-            fileName: 'gif img'
-        }, function (writeError, fileRef) {
-            if (writeError) {
-                throw writeError;
-            } else {
-                assert(fileRef._id !== null);
-            }
-        });
-    });
-    it("insert pdf", async function () {
-        // Upload sample files on server's startup:
-        Receipts.load('http://www.africau.edu/images/default/sample.pdf', {
-            fileName: 'pdf file'
-        }, function (writeError, fileRef) {
-            if (writeError) {
-                throw writeError;
-            } else {
-                assert(fileRef._id !== null);
-            }
-        });
-    });
-    it("insert exe", async function () {
-        // Upload sample files on server's startup:
-        Receipts.load('http://www.lancsngfl.ac.uk/cmsmanual/getfile.php?src=9/JRuler.exe', {
-            fileName: 'exe file'
-        }, function (writeError, fileRef) {
-            if (writeError) {
-                throw writeError;
-            } else {
-                assert(fileRef._id !== null);
-            }
-        });
-    });
-    it("delete image", function (done) {
-        // need this timeout because we need to wait until the images are uploaded
-        setTimeout(async function () {
-            // get all files in test db
-            let result = runFetch();
-            // get the id of the first one
-            const id = result[0]._id;
-            // remove file by id
-            Receipts.remove({id: id});
-            // check to see if its still in the db
-            result = runFetch(id);
-            // it shouldn't be there, result will be empty
-            assert(result.length === 0);
-            done();
-        }, 3000)
-    });
 });
