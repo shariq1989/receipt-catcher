@@ -96,7 +96,7 @@ describe("receipt-catcher", function () {
         it("insert large image", async function () {
             // Upload sample files on server's startup:
             Receipts.load('https://upload.wikimedia.org/wikipedia/commons/4/4e/Pleiades_large.jpg', {
-                fileName: 'gif img'
+                fileName: 'large img'
             }, function (writeError, fileRef) {
                 if (writeError) {
                     throw writeError;
@@ -187,6 +187,23 @@ describe("receipt-catcher", function () {
                 assert(result[0].name === new_name);
                 done();
             }, 3000)
+        });
+        it("bdd delete check", function () {
+            // fetch logo.png
+            let result = runFetch({name: 'logo.png'});
+            // extract file id and user id
+            const id = result[0]._id;
+            let user = result[0].userId;
+            // if user is null, it was uploaded by test automation
+            if (user === undefined || user === null) {
+                user = 'Test Automation';
+            }
+            console.log('Given that a file (id:' + id + ') was uploaded by a user ' + user);
+            console.log('When the user (' + user + ') tries to delete the file (id:' + id + ')');
+            Receipts.remove({id: id});
+            console.log('That the file (id:' + id + ') will no longer exist');
+            result = runFetch({id: id});
+            assert(result.length === 0);
         });
     }
 });

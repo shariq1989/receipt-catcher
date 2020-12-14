@@ -228,7 +228,7 @@ On Dec 2, the team mob programmed. All 5 developers participated in this activit
 
 ### Test-Driven Development (10 points)
 
-#### This sprint we added ten new tests.
+#### This sprint we added 11 new tests.
 
 We added a new client side test (router is routing to root)
 for our new router functionality
@@ -253,7 +253,11 @@ There are also new tests that confirm the robustness of a function we wrote.
 - runFetch provided multiple parameters runFetch returns no results
 - runFetch returns no results
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/server_tests.png" width="600" alt="server_tests.png">
+Lastly, we added a BDD test using the "Given...When...That" format.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/bdd_test.png" width="400" alt="bdd_test.png">
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/server_test.png" width="600" alt="server_tests.png">
 
 ### Continuous Integration (5 points)
 
