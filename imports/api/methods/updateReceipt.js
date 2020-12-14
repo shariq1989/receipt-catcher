@@ -5,5 +5,6 @@ Meteor.methods({
   updateReceipt(receiptId){
     const file = Receipts.findOne({_id: receiptId});
     currentData = file.fetch();
+    return currentData
   },
 });

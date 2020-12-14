@@ -2,19 +2,19 @@
   <div>
     <h2>Receipts Table</h2>
     <el-table
+        border
+        stripe
         :data="receipts"
         style="width: 100%">
       <el-table-column
           label="Name"
+          prop="name"
       >
-        <template slot-scope="scope">
-          <el-button
-              @click.native.prevent="openImage(scope.row)"
-              type="text"
-              size="small">
-            {{ scope.row.name }}
-          </el-button>
-        </template>
+      <template slot-scope="scope">
+          <span class="name">
+            <a :href="'/receipts/'+scope.row._id">{{ scope.row.name }}</a>
+          </span>
+      </template>
       </el-table-column>
       <el-table-column
           prop="meta.date"
@@ -49,8 +49,6 @@
         </template>
       </el-table-column>
     </el-table>
-    <br>
-    <a href='/'>Upload New Receipt</a>
   </div>
 </template>
 
@@ -96,26 +94,6 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  font-family: monospace;
-}
 
-table {
-  width: 100%;
-}
-
-table {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 2px 5px;
-  border: 1px solid black;
-}
-
-thead {
-  background: #ddd;
-}
 
 </style>

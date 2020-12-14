@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1>Receipt Catcher</h1>
-    <blaze-template template="loginButtons" tag="span"></blaze-template>
+    <header>
+      <h1>Receipt Catcher</h1>
+    </header>
+    <nav-menu/>
     <template v-if="currentUser">
-      <!-- <upload/> -->
-      <!-- <display/> -->
       <router-view/>
     </template>
   </div>
@@ -14,11 +14,13 @@
 import { Meteor } from "meteor/meteor";
 import Upload from "./components/Upload";
 import Display from "./components/Display";
+import NavMenu from "./components/NavMenu";
 
 export default {
   components: {
     Upload,
     Display,
+    NavMenu
   },
   meteor: {
     currentUser() {
@@ -30,7 +32,13 @@ export default {
 
 <style>
   body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     padding: 10px;
+  }
+  h1{
+    font-family: Georgia, sans-serif;
+    font-size: 3em;
+    letter-spacing: -2px;
+    color: darkcyan;
   }
 </style>
