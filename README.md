@@ -223,7 +223,7 @@ alt="dec13_burn.png">
 
 ### Pair- or Mob-Programming (5 points)
 
-On Dec 2, the team mobbed-program. All 5 developers participated in this activity as evident in the recording below:
+On Dec 2, the team mob programmed. All 5 developers participated in this activity as evident in the recording below:
 [https://drive.google.com/file/d/10LIQPd0qlQPxlsXeZkD4m9dnRtgc3Pe5/view?usp=sharing]
 
 ### Test-Driven Development (10 points)
@@ -258,7 +258,7 @@ There are also new tests that confirm the robustness of a function we wrote.
 ### Continuous Integration (5 points)
 
 1. We have a Continuous Integration system running.
-2. We only work on the main/trunk/master together-there are no long-lived code branches.
+2. We only work on the main/trunk/master together - there are no long-lived code branches.
 3. The CI system automatically builds our code every time we push to main/trunk/master.
 4. The CI system automatically executes all our tests every time it builds the code.
 5. Evidence that CI system exists and behaves properly:
@@ -267,15 +267,15 @@ https://app.circleci.com/pipelines/github/shariq1989/receipt-catcher
 
 Steps that are run as a part of our CI. They run automatically when code is pushed to main
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI.png" width="250" alt="CI.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI.png" width="600" alt="CI.png">
 
 Tests are run automatically in the server_tests job
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI2.png" width="400" alt="CI2.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI2.png" width="600" alt="CI2.png">
 
 CI and CD running automatically for every push to main
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/cicd.png" width="400" alt="cicd.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/cd.png" width="600" alt="cicd.png">
 
 ### Continuous Deployment (5 points)
 
@@ -288,33 +288,31 @@ CI and CD running automatically for every push to main
 
 #### Evidence of CD deployments working
 
-We changed the color of "Select an image" from black to red. Here it is in the original black color.
+We added a new UI components library to improve the look of our application. Here is what it looked like on the server
+before the addition.
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red1.png" width="300" alt="red1.png">
 
-You can see here that we updated the CSS and pushed the change under commit message "testing CD"
+These code pushes were related to the UI updates. The new library was automatically installed by the CI/CD system based
+on changes to the package.json file.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red3.png" width="300" alt="red3.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/ui_update_cd.png" width="600" alt="ui.png">
 
-Here is the corresponding test and deployment for that commit message "testing CD"
+In the same production instance, the UI is now updated.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red4.png" width="300" alt="red4.png">
-
-In the same production instance, the color is now red.
-
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red2.png" width="300" alt="red2.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/updated_ui.png" width="300" alt="new_ui.png">
 
 Build deployment steps including verification.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD.png" width="300" alt="CD.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD.png" width="600" alt="CD.png">
 
 CI and CD stages run for green builds
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/cicd.png" width="400" alt="cicd.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/cd.png" width="600" alt="cicd.png">
 
 Deploy job was not initiated because I added a failing test
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/FAILCD.png" width="400" alt="FAILCD.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/FAILCD.png" width="600" alt="FAILCD.png">
 
 ### Sprint Retrospective (4 points)
 
@@ -328,7 +326,7 @@ development process.
 3. Adding unit and/or integration testing to the Definition of Done
 4. Adding passed unit and/or integration tests to the Definition of Ready
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/straw_retro.png" width="250"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/straw_retro.png" width="600"
 alt="straw_retro.png">
 
 ### Sprint Review (1 point)
