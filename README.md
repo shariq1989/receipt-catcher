@@ -83,12 +83,10 @@ We used Affinity Group Sizing to estimate the size of the stories and pointed th
 Everyone in the Strawberry team is a development team member so we were all involved in estimating. 
 
 ## First Sprint
-Details of First Sprint can be found in PREVIOUSREADME.md file
-[a link](https://github.com/shariq1989/receipt-catcher/blob/main/PREVIOUSREADME.md)
+Details of First Sprint can be found in [PREVIOUSREADME.md](https://github.com/shariq1989/receipt-catcher/blob/main/PREVIOUSREADME.md) file
 
 ## Second Sprint
-Details of Second Sprint can be found in PREVIOUSREADME.md file
-[a link](https://github.com/shariq1989/receipt-catcher/blob/main/PREVIOUSREADME.md)
+Details of Second Sprint can be found in [PREVIOUSREADME.md](https://github.com/shariq1989/receipt-catcher/blob/main/PREVIOUSREADME.md) file
 
 ## Third Sprint
 
@@ -100,16 +98,13 @@ We forecasted 19 story points because:
 The team felt confident that they would be able to complete this number.  Another consideration was that there was at least one story that was carried over from the previous sprint, which was almost completed.
 
 ### Sprint Planning Event (4 points)
-Evidence can be found in the recording below starting at minute 02:00.
-[a link](https://drive.google.com/file/d/1u46mmszBPSqQ_VTpNPVDd0bqHzhT55BK/view?usp=sharing)
+Evidence can be found in the [recording](https://drive.google.com/file/d/1u46mmszBPSqQ_VTpNPVDd0bqHzhT55BK/view?usp=sharing) starting at minute 02:00.
 
 ### Backlog Size (1 story)
-Evidence can be found in the recording below starting at minute 03:00.
-[a link](https://drive.google.com/file/d/1u46mmszBPSqQ_VTpNPVDd0bqHzhT55BK/view?usp=sharing)
+Evidence can be found in the [recording](https://drive.google.com/file/d/1u46mmszBPSqQ_VTpNPVDd0bqHzhT55BK/view?usp=sharing) starting at minute 03:00.
 
 ### User Story Decomposition (2 points)
-Evidence can be found in the recording below starting at minute 16:00.
-[a link](https://drive.google.com/file/d/1u46mmszBPSqQ_VTpNPVDd0bqHzhT55BK/view?usp=sharing)
+Evidence can be found in the [recording](https://drive.google.com/file/d/1u46mmszBPSqQ_VTpNPVDd0bqHzhT55BK/view?usp=sharing) starting at minute 16:00.
 
 ### Sprint Backlog Format and Accessibility (3 points)
 1. Our Sprint Backlog is represented in a Kanban board in Miro.
