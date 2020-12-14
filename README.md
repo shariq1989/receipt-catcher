@@ -159,12 +159,12 @@ the [recording](https://drive.google.com/file/d/1u46mmszBPSqQ_VTpNPVDd0bqHzhT55B
 On December 9 at the usual 9pm EST scheduled time, the team met for a Daily Scrum ceremony. The order of speakers was:
 Diah, William, Rick, Remi, Davey.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec9_daily_scrum.png" width="250"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec9_daily_scrum.png" width="400"
 alt="dec9_daily_scrum.png">
 
 The meeting sparked lots of follow-up discussion on the Slack channel.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec9_after_scrum.png" width="250"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec9_after_scrum.png" width="700"
 alt="dec9_after_scrum.png">
 
 ### Daily Scrum - What did you do? (5 points)
@@ -207,18 +207,18 @@ On Dec 9, we discovered that one of the Dev Task that belong to UI Enhancements 
 repurposed it to capture a newly found Story that Remi worked on, which was routing. The remaining Dev Task was edited
 to represent the work by Davey a little bit better, which is adding a header to the web app.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/miro_log_sprint3.png" width="250"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/miro_log_sprint3.png" width="600"
 alt="miro_log_sprint3.png">
 
 We also updated the Sprint Burndown Chart frequently. This screenshot was taken on Dec 9, which shows that we had 14
 points remaining in the sprint to be completed.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec9_burn.png" width="250"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec9_burn.png" width="600"
 alt="dec9_burn.png">
 
 Later, we updated the chart as seen below:
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec13_burn.png" width="250"
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec13_burn.png" width="600"
 alt="dec13_burn.png">
 
 ### Pair- or Mob-Programming (5 points)
@@ -255,7 +255,7 @@ There are also new tests that confirm the robustness of a function we wrote.
 
 Lastly, we added a BDD test using the "Given...When...That" format.
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/bdd_test.png" width="400" alt="bdd_test.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/bdd_test.png" width="600" alt="bdd_test.png">
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/server_test.png" width="600" alt="server_tests.png">
 
