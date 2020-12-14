@@ -6,6 +6,7 @@ import Upload from "../imports/ui/components/Upload";
 import App from '../imports/ui/App.vue';
 import VueRouter from "vue-router";
 import {createLocalVue, mount, shallowMount } from '@vue/test-utils';
+import playwright from "playwright";
 
 const routes = [
   {
@@ -32,7 +33,6 @@ const routes = [
 const localVue = createLocalVue();
 localVue.use(VueRouter);
 
-
 describe("receipt-catcher", function () {
     it("package.json has correct name", async function () {
         const {name} = await import("../package.json");
@@ -43,7 +43,6 @@ describe("receipt-catcher", function () {
             assert.strictEqual(Meteor.isServer, false);
         });
     }
-
     if (Meteor.isServer) {
         it("server is not client", function () {
             assert.strictEqual(Meteor.isClient, false);
@@ -102,15 +101,17 @@ describe("receipt-catcher", function () {
             }
         });
     });
+    it("testRouterRoot", async()=> {
+      const browser = await playwright.webkit.launch();
+      const page = await browser.newPage();
+      await page.goto('http://96.126.97.44/'); //go to root path, routing will be handled by app router
+      await page.waitFor(200);
+      await assert(window.location.pathname=="/");
+    });
     /*it("TBD Update Test", async function(){
       // 1. Upload pre-defined test case
       // 2. Modify (1) through update method
       // 3. Check for updates in pre-defined test case
     });
-    it("routerTestRoot",  async function(){
-      const router = new VueRouter({routes}); //create test router based on real routes
-      //const wrapper = mount(App, {localVue, router}); //make test App
-      router.push('/') //go to root path
-      assert(window.location.pathname=='/') //check for Upload component at root path as expected.
-    });*/
+    */
 });
