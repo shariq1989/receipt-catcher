@@ -1,6 +1,6 @@
 import assert from "assert";
 import {Meteor} from "meteor/meteor";
-import {Receipts} from "../imports/api/collections/Receipts";
+import {Receipts, runFetch} from "../imports/api/collections/Receipts";
 import VueRouter from "vue-router";
 import {createLocalVue} from '@vue/test-utils';
 
@@ -29,14 +29,6 @@ const routes = [
 const localVue = createLocalVue();
 localVue.use(VueRouter);
 
-
-function runFetch(findOne = undefined) {
-    if (!findOne) {
-        return Receipts.find({}).fetch();
-    } else {
-        return Receipts.find(findOne).fetch();
-    }
-}
 
 describe("receipt-catcher", function () {
     this.timeout(100000);

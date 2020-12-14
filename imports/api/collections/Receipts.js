@@ -23,4 +23,12 @@ if (Meteor.isServer) {
     });
 }
 
+export function runFetch(findOne = undefined) {
+    if (!findOne) {
+        return Receipts.find({}).fetch();
+    } else {
+        return Receipts.find(findOne).fetch();
+    }
+}
+
 export default Receipts; // import in other files
