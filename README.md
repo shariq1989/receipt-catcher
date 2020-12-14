@@ -84,9 +84,11 @@ Everyone in the Strawberry team is a development team member so we were all invo
 
 ## First Sprint
 Details of First Sprint can be found in PREVIOUSREADME.md file
+[a link](https://github.com/shariq1989/receipt-catcher/blob/main/PREVIOUSREADME.md)
 
 ## Second Sprint
 Details of Second Sprint can be found in PREVIOUSREADME.md file
+[a link](https://github.com/shariq1989/receipt-catcher/blob/main/PREVIOUSREADME.md)
 
 ## Third Sprint
 
@@ -100,8 +102,6 @@ The team felt confident that they would be able to complete this number.  Anothe
 ### Sprint Planning Event (4 points)
 Evidence can be found in the recording below starting at minute 02:00.
 [a link](https://drive.google.com/file/d/1u46mmszBPSqQ_VTpNPVDd0bqHzhT55BK/view?usp=sharing)
-[(https://drive.google.com/file/d/1u46mmszBPSqQ_VTpNPVDd0bqHzhT55BK/view?usp=sharing)]
-
 
 ### Backlog Size (1 story)
 Evidence can be found in the recording below starting at minute 03:00.
@@ -125,10 +125,13 @@ Evidence can be found in the recording below starting at minute 16:00.
 6. Richard helped set the board and by virtue of access should be able to view the URL above.
  
 ### Daily Scrum (1 point)
-On December 9 at the usual 9pm EST scheduled time, the team met for a Daily Scrum ceremony.  The order of speakers was: Diah, William, Rick, Remi, Davey.  
+On December 9 at the usual 9pm EST scheduled time, the team met for a Daily Scrum ceremony.  The order of speakers was: Diah, William, Rick, Remi, Davey.
+
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec9_daily_scrum.png" width="250"
  alt="dec9_daily_scrum.png">
+ 
 The meeting sparked lots of follow-up discussion on the Slack channel.
+
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec9_after_scrum.png" width="250"
  alt="dec9_after_scrum.png">
  
@@ -159,14 +162,17 @@ Remi: I had a blocker around the routing story that was causing 404 errors to be
 
 ### Update Sprint Task Board and Burndown Chart (2 points)
 On Dec 9, we discovered that one of the Dev Task that belong to UI Enhancements stories was not needed, thus we repurposed it to capture a newly found Story that Remi worked on, which was routing.  The remaining Dev Task was edited to represent the work by Davey a little bit better, which is adding a header to the web app.
+
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/miro_log_sprint3.png" width="250"
  alt="miro_log_sprint3.png">
  
 We also updated the Sprint Burndown Chart frequently.  This screenshot was taken on Dec 9, which shows that we had 14 points remaining in the sprint to be completed.
+
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec9_burn.png" width="250"
  alt="dec9_burn.png">
 
 Later, we updated the chart as seen below:
+
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/dec13_burn.png" width="250"
  alt="dec13_burn.png">
  
@@ -178,8 +184,62 @@ On Dec 2, the team mobbed-program.  All 5 developers participated in this activi
 NEEDS TO BE FILLED IN
 
 ### Continuous Integration (5 points)
+1. We have a Continuous Integration system running.
+2. We only work on the main/trunk/master together-there are no long-lived code branches.
+3. The CI system automatically builds our code every time we push to main/trunk/master.
+4. The CI system automatically executes all our tests every time it builds the code.
+5. Evidence that CI system exists and behaves properly:
+
+https://app.circleci.com/pipelines/github/shariq1989/receipt-catcher
+
+Steps that are run as a part of our CI. They run automatically when code is pushed to main
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI.png" width="250" alt="CI.png">
+
+Tests are run automatically in the server_tests job
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI2.png" width="400" alt="CI2.png">
+
+CI and CD running automatically for every push to main
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/cicd.png" width="400" alt="cicd.png">
 
 ### Continuous Deployment (5 points)
+1. We have a Continuous Delivery system running.
+2. When the build is "green", the CD system deploys our software to production environment ("Production"); 
+3. when the build is "red", the CD doesn't alter Production. 
+4. The CD system executes additional tests of our software in Production to ensure Production is up and running successfully after deployment. 
+5. Evidence that CD system exists and behaves properly:
+
+
+#### Evidence of CD deployments working
+We changed the color of "Select an image" from black to red. Here it is in the original black color.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red1.png" width="300" alt="red1.png">
+
+You can see here that we updated the CSS and pushed the change under commit message "testing CD"
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red3.png" width="300" alt="red3.png">
+
+Here is the corresponding test and deployment for that commit message "testing CD"
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red4.png" width="300" alt="red4.png">
+
+In the same production instance, the color is now red.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red2.png" width="300" alt="red2.png">
+
+Build deployment steps including verification.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD.png" width="300" alt="CD.png">
+
+CI and CD stages run for green builds
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/cicd.png" width="400" alt="cicd.png">
+
+Deploy job was not initiated because I added a failing test
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/FAILCD.png" width="400" alt="FAILCD.png">
 
 ### Sprint Retrospective (4 points)
 We conducted a sprint retrospective that was attended by the entire team on Monday Dec 7 during one of the in-class activity. We decided as a team that we need to improve at test driven development. This would lead to increased test coverage and thus, a more reliable application. In order to achieve this, we decided to add the following changes to our development process.
