@@ -228,12 +228,14 @@ On Dec 2, the team mobbed-program. All 5 developers participated in this activit
 
 ### Test-Driven Development (10 points)
 
+#### This sprint we added ten new tests.
+
 We added a new client side test (router is routing to root)
 for our new router functionality
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/client_test.png" width="300" alt="client_tests.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/client_test.png" width="600" alt="client_tests.png">
 
-We added ten new server side tests. These cover various ways in which we use the Meteor-Files library.
+We added nine new server side tests. These cover various ways in which we use the Meteor-Files library
 
 - insert pdf
 - FilesCollection isImage function
@@ -251,7 +253,7 @@ There are also new tests that confirm the robustness of a function we wrote.
 - runFetch provided multiple parameters runFetch returns no results
 - runFetch returns no results
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/server_tests.png" width="300" alt="server_tests.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/p4/server_tests.png" width="600" alt="server_tests.png">
 
 ### Continuous Integration (5 points)
 
