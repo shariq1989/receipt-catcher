@@ -34,7 +34,7 @@ function runFetch(findOne = undefined) {
     if (!findOne) {
         return Receipts.find({}).fetch();
     } else {
-        return Receipts.find({id: findOne}).fetch();
+        return Receipts.find(findOne).fetch();
     }
 }
 
@@ -48,12 +48,7 @@ describe("receipt-catcher", function () {
         it("client is not server", function () {
             assert.strictEqual(Meteor.isServer, false);
         });
-        it("TBD Update Test", async function () {
-            // 1. Upload pre-defined test case
-            // 2. Modify (1) through update method
-            // 3. Check for updates in pre-defined test case
-        });
-        it("routerTestRoot", async function () {
+        it("router is routing to root", async function () {
             const router = new VueRouter({routes}); //create test router based on real routes
             //const wrapper = mount(App, {localVue, router}); //make test App
             await router.push('/') //go to root path
@@ -130,18 +125,6 @@ describe("receipt-catcher", function () {
                 }
             });
         });
-        it("insert exe", async function () {
-            // Upload sample files on server's startup:
-            Receipts.load('http://www.lancsngfl.ac.uk/cmsmanual/getfile.php?src=9/JRuler.exe', {
-                fileName: 'exe file'
-            }, function (writeError, fileRef) {
-                if (writeError) {
-                    throw writeError;
-                } else {
-                    assert(fileRef._id !== null);
-                }
-            });
-        });
         it("delete image", function (done) {
             // need this timeout because we need to wait until the images are uploaded
             setTimeout(async function () {
@@ -152,11 +135,25 @@ describe("receipt-catcher", function () {
                 // remove file by id
                 Receipts.remove({id: id});
                 // check to see if its still in the db
-                result = runFetch(id);
+                result = runFetch({id: id});
                 // it shouldn't be there, result will be empty
                 assert(result.length === 0);
                 done();
             }, 3000)
+        });
+        it("FilesCollection isImage function", function () {
+            // get all files in test db
+            let result = runFetch({name: 'jpeg img'});
+            // get the id of the first one
+            const isImage = result[0].isImage;
+            assert(isImage === true);
+        });
+        it("FilesCollection isPDF function", function () {
+            // get all files in test db
+            let result = runFetch({name: 'pdf file'});
+            // get the id of the first one
+            const isPDF = result[0].isPDF;
+            assert(isPDF === true);
         });
     }
 });
